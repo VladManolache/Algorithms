@@ -11,20 +11,13 @@ public class BSTNode {
 
     public BSTNode leftChild;
     public BSTNode rightChild;
+    public BSTNode parent;
     public int value;
 
     public BSTNode(int value) {
-        this.value = value;
-        this.leftChild = null;
-        this.rightChild = null;
+        this.value = value; 
     }
-
-    public BSTNode(int value, BSTNode leftChild, BSTNode rightChild) {
-        this.value = value;
-        this.leftChild = leftChild;
-        this.rightChild = rightChild;
-    }
-
+ 
     public boolean remove(int value, BSTNode parent) {
         if (value < this.value) {  // Current value is larger.
             if (leftChild != null) {

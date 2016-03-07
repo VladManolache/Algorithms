@@ -15,10 +15,10 @@ public class BinarySearchTree {
         return rootNode;
     }
     
-    public void addNode(int value) {
+    public BSTNode insert(int value) {
         if (rootNode == null) {
             rootNode = new BSTNode(value);
-            return;
+            return rootNode;
         }
 
         BSTNode node = rootNode;
@@ -26,13 +26,15 @@ public class BinarySearchTree {
             if (value < node.value) {
                 if (node.leftChild == null) {
                     node.leftChild = new BSTNode(value);
-                    break;
+                    node.leftChild.parent = node;
+                    return node.leftChild;
                 }
                 node = node.leftChild;
             } else {
                 if (node.rightChild == null) {
                     node.rightChild = new BSTNode(value);
-                    break;
+                    node.rightChild.parent = node;
+                    return node.rightChild;
                 }
                 node = node.rightChild;
             }
