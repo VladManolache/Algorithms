@@ -1,5 +1,5 @@
 
-package algorithms.trees;
+package algorithms.trees.rbt;
 
 /**
  *

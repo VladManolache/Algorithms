@@ -1,7 +1,7 @@
 /**
  * Representation of the binary search tree node.
  */
-package algorithms.trees;
+package algorithms.trees.bst;
 
 /**
  *

@@ -1,10 +1,12 @@
 /**
  * Implementation of RedBlackTree data structure.
+ * More info:
  * https://www.cs.auckland.ac.nz/software/AlgAnim/red_black.html
+ * http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video-lectures/lecture-10-red-black-trees-rotations-insertions-deletions/lec10.pdf
  */
-package algorithms.trees;
+package algorithms.trees.rbt;
 
-import algorithms.trees.RBNode.NodeColor;
+import algorithms.trees.rbt.RBNode.NodeColor;
 
 /**
  *

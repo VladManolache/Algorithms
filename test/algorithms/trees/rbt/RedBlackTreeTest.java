@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.trees;
-
+package algorithms.trees.rbt;
+ 
 import java.util.ArrayList; 
 import org.junit.Test;
 import static org.junit.Assert.*;

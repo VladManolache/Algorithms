@@ -1,7 +1,7 @@
 /**
  * Implementation of binary search tree data structure.
  */
-package algorithms.trees;
+package algorithms.trees.bst;
  
 /**
  *
