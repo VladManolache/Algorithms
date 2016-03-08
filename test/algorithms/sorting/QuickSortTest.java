@@ -5,7 +5,6 @@
  */
 package algorithms.sorting;
 
-import java.util.Arrays;
 import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,8 +14,8 @@ import static org.junit.Assert.*;
  *
  * @author user
  */
-public class MergeSortTest {
-
+public class QuickSortTest {
+    
     int[] numbers;
     int SIZE = 10000;
     int MAX_NUMBER = 1000;
@@ -31,15 +30,15 @@ public class MergeSortTest {
     }
 
     @Test
-    public void testMergeSort() {
+    public void testQuickSort() {
         long startTime = System.currentTimeMillis();
-
-        MergeSort sorter = new MergeSort();
-        sorter.executeMergeSort(numbers);
-
+ 
+        QuickSort sorter = new QuickSort();
+        sorter.executeSort(numbers); 
+        
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
-        System.out.println("Mergesort " + elapsedTime + " ms");
+        System.out.println("Quicksort " + elapsedTime + " ms");
 
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] > numbers[i + 1]) {
@@ -47,21 +46,5 @@ public class MergeSortTest {
             }
         }
         assertTrue(true); 
-    }
-
-    @Test
-    public void testStandardSort() {
-        long startTime = System.currentTimeMillis();
-        Arrays.sort(numbers);
-        long stopTime = System.currentTimeMillis();
-        long elapsedTime = stopTime - startTime;
-        System.out.println("Standard Java sort " + elapsedTime + " ms");
-
-        for (int i = 0; i < numbers.length - 1; i++) {
-            if (numbers[i] > numbers[i + 1]) {
-                fail("Should not happen");
-            }
-        }
-        assertTrue(true);
     }
 }
