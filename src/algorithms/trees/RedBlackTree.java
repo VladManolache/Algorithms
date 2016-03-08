@@ -1,3 +1,7 @@
+/**
+ * Implementation of RedBlackTree data structure.
+ * https://www.cs.auckland.ac.nz/software/AlgAnim/red_black.html
+ */
 package algorithms.trees;
 
 import algorithms.trees.RBNode.NodeColor;
