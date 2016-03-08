@@ -92,4 +92,11 @@ public class BinarySearchTree {
         preorderTraversal(root.rightChild);
         System.out.print(root.value + " ");
     } 
+    
+    public int treeHeigh(BSTNode node) {
+        if (node == null) {
+            return 0;
+        }
+        return Math.max(1 + treeHeigh(node.leftChild), 1 + treeHeigh(node.rightChild));
+    }
 }

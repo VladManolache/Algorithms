@@ -52,7 +52,7 @@ public class RedBlackTree {
             if (x.parent == x.parent.parent.leftChild) {
                 /* If x's parent is a left, y is x's right 'uncle' */
                 y = x.parent.parent.rightChild;
-                if (y.color == NodeColor.RED) {
+                if (y!= null && y.color == NodeColor.RED) {
                     /* case 1 - change the colours */
                     x.parent.color = NodeColor.BLACK;
                     y.color = NodeColor.BLACK;
@@ -76,7 +76,7 @@ public class RedBlackTree {
                 }
             } else {
                 y = x.parent.parent.leftChild;
-                if (y.color == NodeColor.RED) {
+                if (y!= null && y.color == NodeColor.RED) {
                     /* case 1 - change the colours */
                     x.parent.color = NodeColor.BLACK;
                     y.color = NodeColor.BLACK;
@@ -103,7 +103,7 @@ public class RedBlackTree {
         rootNode.color = NodeColor.BLACK;
     }
     
-    private void leftRotate(RBNode x) {
+    public void leftRotate(RBNode x) {
         RBNode y = x.rightChild;
  
         /* Turn y's left sub-tree into x's right sub-tree */
@@ -132,7 +132,7 @@ public class RedBlackTree {
         x.parent = y;
     }
     
-    private void rightRotate(RBNode x) {
+    public void rightRotate(RBNode x) {
         RBNode y = x.leftChild;
   
         x.leftChild = y.rightChild;

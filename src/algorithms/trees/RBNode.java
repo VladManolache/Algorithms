@@ -19,6 +19,11 @@ public class RBNode {
      
     public RBNode(int value) { 
         this.value = value;  
-        this.color = NodeColor.RED;
+        this.color = NodeColor.BLACK;
+    } 
+    
+    public RBNode(int value, NodeColor nodeColor) { 
+        this.value = value;  
+        this.color = nodeColor;
     } 
 }

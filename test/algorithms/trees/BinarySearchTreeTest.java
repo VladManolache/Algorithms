@@ -56,4 +56,18 @@ public class BinarySearchTreeTest {
         assertEquals(binarySearchTree.rootNode.rightChild.value, 7);
         assertEquals(binarySearchTree.rootNode.rightChild.leftChild.value, 6);
     }
+    
+    @Test
+    public void heightTest() {
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+
+        // Add values to binary search tree.
+        ArrayList<Integer> values = new ArrayList<>(); 
+        for (int i = 0; i < 100; i++) {
+            binarySearchTree.insert(i);
+        }
+         
+        System.out.println("Height = " + binarySearchTree.treeHeigh(binarySearchTree.rootNode));
+        assertEquals(100, binarySearchTree.treeHeigh(binarySearchTree.rootNode));
+    }
 }
