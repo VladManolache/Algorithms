@@ -3,6 +3,8 @@
  * More info: 
  * V1 quicksort tutorial - http://www.algolist.net/Algorithms/Sorting/Quicksort
  * V2 quicksort tutorial - https://www.youtube.com/watch?v=aQiWF4E8flQ
+ * V2 works faster usually, but works much slower in the worst case when the values
+ * are already sorted and even crashes on sorted inputs of 100000 and larger.
  */
 package algorithms.sorting;
 
@@ -29,6 +31,8 @@ public class QuickSort {
         int i = l, j = h;
         int aux; 
         
+        // We need to get a random index between l and h to avoid bad performance
+        // in the case that the array is already sorted.
         int value = rand.nextInt(h - l + 1) + l; 
         int pivot = S[value];
         
@@ -55,6 +59,8 @@ public class QuickSort {
             }
         }
         
+        // At this point, j should be smaller than i by 1.
+        // This means the intervals will be (l, j) and (i, h).
         if (l < j) {
             quickSortV1(S, l, j);
         }
@@ -67,6 +73,8 @@ public class QuickSort {
         int p; 
 
         if (h - l > 0) {
+            // The partition element should not be excluded from the search.
+            // This means the intervals will be (l, p-1) and (p+1, h).
             p = partition(S, l, h);
             quickSortV2(S, l, p - 1);
             quickSortV2(S, p + 1, h);
@@ -78,6 +86,8 @@ public class QuickSort {
         int p = h;
         int leftWall = l; 
         
+        // Move all elements larger than pivot to right of leftWall. 
+        // Move lefWwall to right each time.
         for (int i = l; i < h; i++) { 
             if (S[i] < S[p]) {
                 aux = S[i];
@@ -87,7 +97,9 @@ public class QuickSort {
             } 
         }
         
-        // Swap pivot with S[firsthigh]
+        // Swap pivot with S[firsthigh]. Since we have moved everything bigger
+        // than S[p] to the right, this will mean all elements to the left of 
+        // S[p] will be smaller than S[p].
         aux = S[p];
         S[p] = S[leftWall];
         S[leftWall] = aux; 
