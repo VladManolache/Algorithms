@@ -24,17 +24,17 @@ public class QuickSortTest {
             numbers[i] = generator.nextInt(MAX_NUMBER);
         }
     }
-
+ 
     @Test
-    public void testQuickSort() {
+    public void testQuickSortV1() {
         long startTime = System.currentTimeMillis();
  
         QuickSort sorter = new QuickSort();
-        sorter.executeSort(numbers, false); 
+        sorter.executeSort(numbers, true); 
         
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
-        System.out.println("V1-Quicksort " + elapsedTime + " ms");
+        System.out.println("V1 - Quicksort " + elapsedTime + " ms");
 
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] > numbers[i + 1]) {
@@ -45,18 +45,67 @@ public class QuickSortTest {
     }
     
     @Test
-    public void testRandomizedQuickSort() {
+    public void testQuickSortV1WorstCase() {
         long startTime = System.currentTimeMillis();
  
+        int[] numbersWorstCase = new int[SIZE];   // Fails on larger values.
+        for (int i = 0; i < numbersWorstCase.length; i++) {
+            numbersWorstCase[i] = i;
+        }
+        
         QuickSort sorter = new QuickSort();
-        sorter.executeSort(numbers, true); 
+        sorter.executeSort(numbersWorstCase, true); 
         
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
-        System.out.println("V2-Quicksort " + elapsedTime + " ms");
+        System.out.println("V1 - Quicksort on sorted array " + elapsedTime + " ms");
+
+        for (int i = 0; i < numbersWorstCase.length - 1; i++) {
+            if (numbersWorstCase[i] > numbersWorstCase[i + 1]) {
+                fail("Should not happen");
+            }
+        }
+        assertTrue(true); 
+    }
+    
+    @Test
+    public void testQuickSortV2() {
+        long startTime = System.currentTimeMillis();
+ 
+        QuickSort sorter = new QuickSort();
+        sorter.executeSort(numbers, false); 
+        
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        System.out.println("V2 - Quicksort " + elapsedTime + " ms");
 
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] > numbers[i + 1]) {
+                fail("Should not happen");
+            }
+        }
+        assertTrue(true); 
+    }
+    
+    @Test
+    public void testQuickSortV2WorstCase() {
+        long startTime = System.currentTimeMillis();
+ 
+        // Warning - Having an array of 100000 elements produces a stack overflow error.
+        int[] numbersWorstCase = new int[10000];   
+        for (int i = 0; i < numbersWorstCase.length; i++) {
+            numbersWorstCase[i] = i;
+        }
+        
+        QuickSort sorter = new QuickSort();
+        sorter.executeSort(numbersWorstCase, false); 
+        
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        System.out.println("V2 - Quicksort on sorted array " + elapsedTime + " ms");
+
+        for (int i = 0; i < numbersWorstCase.length - 1; i++) {
+            if (numbersWorstCase[i] > numbersWorstCase[i + 1]) {
                 fail("Should not happen");
             }
         }

@@ -1,8 +1,8 @@
 /*
  * Implementation of quickSort algorithm.
- * More info:
- * http://www.algolist.net/Algorithms/Sorting/Quicksort
- * https://en.wikipedia.org/wiki/Quicksort
+ * More info: 
+ * V1 quicksort tutorial - http://www.algolist.net/Algorithms/Sorting/Quicksort
+ * V2 quicksort tutorial - https://www.youtube.com/watch?v=aQiWF4E8flQ
  */
 package algorithms.sorting;
 
@@ -14,6 +14,8 @@ import java.util.Random;
  */
 public class QuickSort {
 
+    Random rand = new Random(); 
+    
     public void executeSort(int[] S, boolean v1) {
         if (v1) {
             quickSortV1(S, 0, S.length - 1);
@@ -27,8 +29,8 @@ public class QuickSort {
         int i = l, j = h;
         int aux; 
         
-        Random rand = new Random(); 
-        int pivot = S[rand.nextInt(h - l + 1) + l];
+        int value = rand.nextInt(h - l + 1) + l; 
+        int pivot = S[value];
         
         while (i <= j) {
             /**
@@ -66,8 +68,8 @@ public class QuickSort {
 
         if (h - l > 0) {
             p = partition(S, l, h);
-            quickSortV1(S, l, p - 1);
-            quickSortV1(S, p + 1, h);
+            quickSortV2(S, l, p - 1);
+            quickSortV2(S, p + 1, h);
         }
     }
 
