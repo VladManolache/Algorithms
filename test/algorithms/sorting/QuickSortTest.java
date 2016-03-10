@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package algorithms.sorting;
 
+package algorithms.sorting;
+ 
 import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,12 +8,12 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author user
+ * @author Vlad Manolache
  */
 public class QuickSortTest {
     
     int[] numbers;
-    int SIZE = 10000;
+    int SIZE = 100000;
     int MAX_NUMBER = 1000;
 
     @Before
@@ -34,11 +30,30 @@ public class QuickSortTest {
         long startTime = System.currentTimeMillis();
  
         QuickSort sorter = new QuickSort();
-        sorter.executeSort(numbers); 
+        sorter.executeSort(numbers, false); 
         
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
-        System.out.println("Quicksort " + elapsedTime + " ms");
+        System.out.println("V1-Quicksort " + elapsedTime + " ms");
+
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i] > numbers[i + 1]) {
+                fail("Should not happen");
+            }
+        }
+        assertTrue(true); 
+    }
+    
+    @Test
+    public void testRandomizedQuickSort() {
+        long startTime = System.currentTimeMillis();
+ 
+        QuickSort sorter = new QuickSort();
+        sorter.executeSort(numbers, true); 
+        
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        System.out.println("V2-Quicksort " + elapsedTime + " ms");
 
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] > numbers[i + 1]) {

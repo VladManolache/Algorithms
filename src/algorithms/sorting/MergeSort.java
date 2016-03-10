@@ -2,13 +2,10 @@
  * Implementation of mergeSort algorithm.
  */
 package algorithms.sorting;
-  
-import java.util.LinkedList;
-import java.util.Queue;
-
+    
 /**
  *
- * @author user
+ * @author Vlad Manolache 
  */
 public class MergeSort {
     
