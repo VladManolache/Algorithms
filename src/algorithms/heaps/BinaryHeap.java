@@ -34,6 +34,15 @@ public class BinaryHeap<AnyType extends Comparable<AnyType>> {
         size = 0;
         heap = (AnyType[]) new Comparable[INITIAL_CAPACITY];
     }
+    
+    public BinaryHeap(AnyType[] array) {
+        size = array.length;
+        heap = (AnyType[]) new Comparable[array.length + 1];
+
+        System.arraycopy(array, 0, heap, 1, array.length); //we do not use 0 index.
+
+        buildHeap();
+    }
 
     public void insert(AnyType x) {
 
