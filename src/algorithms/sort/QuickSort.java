@@ -6,7 +6,7 @@
  * V2 works faster usually, but works much slower in the worst case when the values
  * are already sorted and even crashes on sorted inputs of 100000 and larger.
  */
-package algorithms.sorting;
+package algorithms.sort1;
 
 import java.util.Random;
 

@@ -1,6 +1,7 @@
 
-package algorithms.sorting;
+package algorithms.sort;
  
+import algorithms.sort1.QuickSort;
 import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;

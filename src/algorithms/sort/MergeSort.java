@@ -1,7 +1,7 @@
 /*
  * Implementation of mergeSort algorithm.
  */
-package algorithms.sorting;
+package algorithms.sort1;
     
 /**
  *
