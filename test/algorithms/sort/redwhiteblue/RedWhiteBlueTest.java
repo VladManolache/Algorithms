@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package algorithms.sort.redwhiteblue;
-
-import algorithms.sort.redwhiteblue.RedWhiteBlueNode;
-import algorithms.sort.redwhiteblue.RedWhiteBlueSort;
+ 
 import java.util.Random; 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -42,8 +40,11 @@ public class RedWhiteBlueTest {
         }
         
         RedWhiteBlueSort redWhiteBlueSort = new RedWhiteBlueSort();
-        redWhiteBlueSort.sortElements(nodes);
+        redWhiteBlueSort.sortElements(nodes); 
         
-        System.out.println(nodes);
+        // Make sore that all nodes are in order.
+        for (int i = 0; i < nodes.length - 1; i++) { 
+            assertTrue(nodes[i].getColor().compareTo(nodes[i+1].getColor()) <= 0); 
+        }
      }
 }

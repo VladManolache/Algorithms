@@ -16,23 +16,30 @@ import algorithms.sort.redwhiteblue.RedWhiteBlueNode.Color;
 public class RedWhiteBlueSort {
     
     public void sortElements(RedWhiteBlueNode[] array) {
-        int red = 0;
-        int blue = array.length - 1;
-        int current = 0;
+        int red = 0;  // Pointer to last red value.
+        int blue = array.length - 1;  // Pointer to first blue value.
+        int current = 0;  // Current pointer.
         
-        while (current < blue) {
-            if (array[current].compare(array[blue]) > 0) {
-                swap(array[current], array[blue]);
-                blue--;
+        /**
+         * The idea is to keep pointers to the last red element and first blue element.
+         * Iterate over all elements, and move red elements to left and blue elements to right.
+         */
+        while (current < blue) { 
+            switch (array[current].getColor()) {
+                case RED:
+                    swap(array[current], array[red]);
+                    red++;
+                    current++;
+                    break;
+                case BLUE:
+                    swap(array[current], array[blue]);
+                    blue--;
+                    break;
+                default:
+                    current++;
+                    break;
             }
-            else if(array[current].compare(array[red]) < 0) {
-                swap(array[current], array[red]);
-                red++;
-            }
-            else {
-                current++;
-            }
-        } 
+        }  
     }  
     
     public void swap(RedWhiteBlueNode a, RedWhiteBlueNode b) {
