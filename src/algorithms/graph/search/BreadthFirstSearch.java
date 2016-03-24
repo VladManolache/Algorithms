@@ -1,7 +1,7 @@
 /*
  * Implementation of breadth first search.
  */
-package algorithms.graph.bfs;
+package algorithms.graph.search;
 
 import algorithms.graph.ALGraph;
 import java.util.LinkedList;

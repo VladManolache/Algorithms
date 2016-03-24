@@ -1,7 +1,7 @@
 
-package algorithms.graph.dfs;
+package algorithms.graph.search;
 
-import algorithms.graph.bfs.BreadthFirstSearch;
+import algorithms.graph.search.BreadthFirstSearch;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

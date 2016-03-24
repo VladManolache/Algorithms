@@ -1,7 +1,7 @@
 /*
  * Implementation of depth first search.
  */
-package algorithms.graph.bfs;
+package algorithms.graph.search;
 
 import algorithms.graph.ALGraph;
 
@@ -11,29 +11,31 @@ import algorithms.graph.ALGraph;
  */
 public class DepthFirstSearch {
     
+    ALGraph graph;
     int[] visited;    
     int[] result;
     int k;
     
-    public int[] search(String fileName, int startElement, boolean directionalGraph) {
-        
+    public DepthFirstSearch(String fileName, boolean directionalGraph) {
         // Initialise the graph.
-        ALGraph graph = new ALGraph(fileName, directionalGraph);
-        
-        // Initially, all nodes are unvisited.
-        k = 0;
+        graph = new ALGraph(fileName, directionalGraph);
         result = new int[graph.N + 1];
         visited = new int[graph.N + 1];
+        
+        // Initially, all nodes are unvisited.
+        k = 0; 
         for (int i = 1; i < visited.length; i++) {
             visited[i] = 0;
         }
-        
+    }
+    
+    public int[] search(int startElement) { 
         dfs(graph, startElement);
         
         return result;
     }
     
-    private void dfs(ALGraph graph, int currentElement) {
+    public void dfs(ALGraph graph, int currentElement) {
         visited[currentElement] = 1;
         
         result[++k] = currentElement; 
