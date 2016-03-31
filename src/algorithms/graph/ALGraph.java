@@ -33,7 +33,7 @@ public class ALGraph {
 
             // Initialize adjacency list.
             for (int i = 1; i <= N; i++) {
-                adjacencyList.put(i, new ArrayList<>());
+                adjacencyList.put(i, new ArrayList<AdjacencyListElement>());
             }
             
             while ((line = br.readLine()) != null) {
