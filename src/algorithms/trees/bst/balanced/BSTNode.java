@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.graph.binarytree;
+package algorithms.trees.bst.balanced;
 
 /**
  *
  * @author user
  */
-public class Node {
+public class BSTNode {
     
     public int value;
-    public Node left;
-    public Node right;
+    public BSTNode left;
+    public BSTNode right;
     
-    public Node(int value) {
+    public BSTNode(int value) {
         this.value = value;
     }
     

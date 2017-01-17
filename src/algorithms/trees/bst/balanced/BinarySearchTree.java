@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.graph.binarytree;
+package algorithms.trees.bst.balanced;
 
 /**
  *
  * @author user
  */
-public class BT {
+public class BinarySearchTree {
     
-    public Node root;
+    public BSTNode root;
     
-    public boolean isBalanced(Node node) {
+    public boolean isBalanced(BSTNode node) {
         
         if ( node == null ) {
             return true;
@@ -31,7 +31,7 @@ public class BT {
         return false;
     }
     
-    private int height(Node node) {
+    private int height(BSTNode node) {
         if (node == null) {
             return 0;
         }
