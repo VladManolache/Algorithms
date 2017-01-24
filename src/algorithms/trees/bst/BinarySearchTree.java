@@ -1,9 +1,7 @@
-/**
- * Implementation of binary search tree data structure.
- */
 package algorithms.trees.bst;
  
 /**
+ * Implementation of binary search tree data structure.
  *
  * @author Vlad Manolache
  */

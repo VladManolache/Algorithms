@@ -12,7 +12,7 @@ import org.junit.Test;
 
 /**
  *
- * @author user
+ * @author Vlad Manolache
  */
 public class PowerSetGeneratorTest {
     

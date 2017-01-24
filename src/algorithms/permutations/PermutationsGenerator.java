@@ -1,12 +1,10 @@
-/**
- * Generate all permutations of a string of characters.
- */
 package algorithms.permutations;
 
 import java.util.ArrayList;
 
 /**
- *
+ * Generate all permutations of a string of characters.
+
  * @author Vlad Manolache
  */
 public class PermutationsGenerator {

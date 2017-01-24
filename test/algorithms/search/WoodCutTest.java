@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.permutations;
+package algorithms.search;
 
 import org.junit.Test;
 
 /**
  *
- * @author Vlad Manolache
+ * @author user
  */
-public class NQueensGeneratorTest {
+public class WoodCutTest {
     
     @Test
     public void mainTest() {
-        NQueensGenerator nQueensGenerator = new NQueensGenerator();
-        int count = nQueensGenerator.generateNQueens(8);
-        assert(count == 92);
+        int[] values = new int[] {232, 124, 456};
+        int k = 7;
+        WoodCut woodCut = new WoodCut();
+        System.out.println(woodCut.getWoodCut(values, k));
     }
     
 }

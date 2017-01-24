@@ -1,12 +1,10 @@
-/*
- * Reverse the words in a sentence—i.e., “My name is Chris” becomes “Chris is
- * name My.” Optimize for time and space.
- */
 package algorithms.sequences;
  
 
 /**
- *
+ * Reverse the words in a sentence—i.e., “My name is Chris” becomes “Chris is
+ * name My. Optimize for time and space.
+ * 
  * @author Vlad Manolache
  */
 public class ReverseWords {

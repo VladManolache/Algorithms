@@ -14,7 +14,7 @@ package algorithms.search;
  * Link:
  * https://xizha677.gitbooks.io/codenotes/content/k-closest-numbers-in-sorted-array.html
  * 
- * @author user
+ * @author Vlad Manolache
  */
 public class KClosestNumbers {
     

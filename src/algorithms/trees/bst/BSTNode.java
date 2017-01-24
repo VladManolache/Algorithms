@@ -1,10 +1,8 @@
-/**
- * Representation of the binary search tree node.
- */
 package algorithms.trees.bst;
 
 /**
- *
+ * Representation of the binary search tree node.
+ * 
  * @author Vlad Manolache
  */
 public class BSTNode {
