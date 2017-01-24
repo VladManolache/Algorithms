@@ -14,8 +14,8 @@ package algorithms.search;
  */
 public class WoodCut {
     
-    public int getWoodCut(int[] values, int length) {
-        
+    public int getWoodCut(int[] values, int k) {
+                
         int max = values[0];
         for (int i = 1; i < values.length; i++) {
             if (values[i] > max) {
@@ -28,21 +28,21 @@ public class WoodCut {
         int mid;
         while (start + 1 < end) {
             mid = start + (end - start) / 2;
-            if (getPieces(mid, values) >= length) {
+            if (getPieces(mid, values) >= k) {
                 start = mid;
             }
-            else if (getPieces(mid, values) < length) {
+            else if (getPieces(mid, values) < k) {
                 end = mid;
             }
         }
-        
+                
         return start;
     }
     
-    private int getPieces(int k, int[] values) {
+    private int getPieces(int dim, int[] values) {
         int pieces = 0; 
         for (int i = 0; i < values.length; i++) {
-            pieces += values[i] / k;
+            pieces += values[i] / dim;
         }
         return pieces;
     }
