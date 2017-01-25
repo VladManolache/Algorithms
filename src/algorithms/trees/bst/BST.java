@@ -13,8 +13,12 @@ public class BST {
         return rootNode;
     }
     
+    public void setRootNode(BSTNode node) {
+        this.rootNode = node;
+    }
+    
     public BSTNode insert(int value) {
-        if (rootNode == null) {
+        if ( rootNode == null ) {
             rootNode = new BSTNode(value);
             return rootNode;
         }
@@ -43,6 +47,7 @@ public class BST {
         if (rootNode == null) {  
             return false;
         } 
+        
         // If the root node is the node we want to rempve, add a temporary node as root of the tree.
         // Remove the previous root node, then change the root of the tree.
         // This is done to avoid handling the cases where we have no root node.
@@ -53,14 +58,13 @@ public class BST {
             rootNode = auxRoot.leftChild;
             return result;
         }
-        // The 
         else {
             return rootNode.remove(value, null);
         }
     }
 
     /**
-     * Binary Tree traversals *
+     * Binary Tree traversals 
      * @param root - Root node
      */
     public void preorderTraversal(BSTNode root) {

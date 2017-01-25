@@ -12,8 +12,8 @@ package algorithms.trees.bst;
  *         1                 3
  *       /  \               / 
  * T1 = 2   3         T2 = 4
- *        /
- *       4
+ *         /
+ *        4
  * 
  * T2 isn't a subtree of T1 in the following case:
  *        1                3

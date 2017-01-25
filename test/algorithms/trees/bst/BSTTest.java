@@ -5,12 +5,11 @@
  */
 package algorithms.trees.bst;
 
-import algorithms.trees.bst.BSTBalanced;
 import org.junit.Test;
 
 /**
  *
- * @author user
+ * @author Vlad Manolache
  */
 public class BSTTest {
   
