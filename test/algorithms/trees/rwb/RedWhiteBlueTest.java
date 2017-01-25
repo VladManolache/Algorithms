@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.sort.redwhiteblue;
+package algorithms.trees.rwb;
  
+import algorithms.trees.rwb.RedWhiteBlueSort;
+import algorithms.trees.rwb.RedWhiteBlueNode;
 import java.util.Random; 
 import org.junit.Test;
 import static org.junit.Assert.*;

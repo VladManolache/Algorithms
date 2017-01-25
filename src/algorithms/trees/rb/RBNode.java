@@ -1,4 +1,4 @@
-package algorithms.trees.rbt;
+package algorithms.trees.rb;
 
 /**
  *

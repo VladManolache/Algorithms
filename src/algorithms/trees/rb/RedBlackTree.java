@@ -1,6 +1,6 @@
-package algorithms.trees.rbt;
+package algorithms.trees.rb;
 
-import algorithms.trees.rbt.RBNode.NodeColor;
+import algorithms.trees.rb.RBNode.NodeColor;
 
 /**
  * Implementation of RedBlackTree data structure.
@@ -16,6 +16,10 @@ public class RedBlackTree {
 
     public RBNode getRootNode() {
         return rootNode;
+    }
+    
+    public void setRootNode(RBNode rbNode) {
+        this.rootNode = rbNode;
     }
     
     public RBNode insert(int value) {

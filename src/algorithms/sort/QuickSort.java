@@ -1,16 +1,14 @@
-/*
+package algorithms.sort;
+
+import java.util.Random;
+
+/**
  * Implementation of quickSort algorithm.
  * More info: 
  * V1 quicksort tutorial - http://www.algolist.net/Algorithms/Sorting/Quicksort
  * V2 quicksort tutorial - https://www.youtube.com/watch?v=aQiWF4E8flQ
  * V2 works faster usually, but works much slower in the worst case when the values
  * are already sorted and even crashes on sorted inputs of 100000 and larger.
- */
-package algorithms.sort1;
-
-import java.util.Random;
-
-/**
  *
  * @author Vlad Manolache
  */

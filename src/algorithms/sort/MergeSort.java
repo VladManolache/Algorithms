@@ -1,10 +1,8 @@
-/*
- * Implementation of mergeSort algorithm.
- */
-package algorithms.sort1;
+package algorithms.sort;
     
 /**
- *
+ * Implementation of mergeSort algorithm.
+ * 
  * @author Vlad Manolache 
  */
 public class MergeSort {

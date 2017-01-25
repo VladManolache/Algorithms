@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.trees.rbt;
+package algorithms.trees.rb;
  
+import algorithms.trees.rb.RedBlackTree;
+import algorithms.trees.rb.RBNode;
 import java.util.ArrayList; 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -28,10 +30,10 @@ public class RedBlackTreeTest {
             redBlackTree.insertNode(values.get(i));
         }
 
-        assertEquals(1, redBlackTree.rootNode.value);
-        assertEquals(0, redBlackTree.rootNode.leftChild.value);
-        assertEquals(2, redBlackTree.rootNode.rightChild.value);
-        assertEquals(3, redBlackTree.rootNode.rightChild.rightChild.value); 
+        assertEquals(1, redBlackTree.getRootNode().value);
+        assertEquals(0, redBlackTree.getRootNode().leftChild.value);
+        assertEquals(2, redBlackTree.getRootNode().rightChild.value);
+        assertEquals(3, redBlackTree.getRootNode().rightChild.rightChild.value); 
         assertEquals(redBlackTree.getRootNode().color, RBNode.NodeColor.BLACK);
         assertEquals(redBlackTree.getRootNode().leftChild.color, RBNode.NodeColor.BLACK);
         assertEquals(redBlackTree.getRootNode().rightChild.color, RBNode.NodeColor.BLACK);
@@ -47,10 +49,10 @@ public class RedBlackTreeTest {
             redBlackTree.insertNode(i);
         }
         
-        System.out.println(redBlackTree.treeHeigh(redBlackTree.rootNode));
-        System.out.println(2 * Math.log(redBlackTree.treeCountInternal(redBlackTree.rootNode))/Math.log(2) + 1);
-        assertTrue((redBlackTree.treeHeigh(redBlackTree.rootNode) <= 
-                2 * Math.log(redBlackTree.treeCountInternal(redBlackTree.rootNode)) / Math.log(2) + 1));
+        System.out.println(redBlackTree.treeHeigh(redBlackTree.getRootNode()));
+        System.out.println(2 * Math.log(redBlackTree.treeCountInternal(redBlackTree.getRootNode()))/Math.log(2) + 1);
+        assertTrue((redBlackTree.treeHeigh(redBlackTree.getRootNode()) <= 
+                2 * Math.log(redBlackTree.treeCountInternal(redBlackTree.getRootNode())) / Math.log(2) + 1));
     }
     
     @Test 
@@ -61,20 +63,20 @@ public class RedBlackTreeTest {
         RBNode y = new RBNode('y', RBNode.NodeColor.RED);
         y.parent = x;
         x.leftChild = y;
-        redBlackTree.rootNode = x;
+        redBlackTree.setRootNode(x);
         redBlackTree.rightRotate(x);
-        assertEquals(redBlackTree.rootNode, y);
-        assertEquals(redBlackTree.rootNode.rightChild, x);
-        assertEquals(redBlackTree.rootNode.leftChild, null);
-        assertEquals(redBlackTree.rootNode.rightChild.leftChild, null);
-        assertEquals(redBlackTree.rootNode.rightChild.rightChild, null); 
+        assertEquals(redBlackTree.getRootNode(), y);
+        assertEquals(redBlackTree.getRootNode().rightChild, x);
+        assertEquals(redBlackTree.getRootNode().leftChild, null);
+        assertEquals(redBlackTree.getRootNode().rightChild.leftChild, null);
+        assertEquals(redBlackTree.getRootNode().rightChild.rightChild, null); 
 
         redBlackTree.leftRotate(y);
 
-        assertEquals(redBlackTree.rootNode, x);
-        assertEquals(redBlackTree.rootNode.leftChild, y);
-        assertEquals(redBlackTree.rootNode.rightChild, null);
-        assertEquals(redBlackTree.rootNode.leftChild.leftChild, null);
-        assertEquals(redBlackTree.rootNode.leftChild.rightChild, null);
+        assertEquals(redBlackTree.getRootNode(), x);
+        assertEquals(redBlackTree.getRootNode().leftChild, y);
+        assertEquals(redBlackTree.getRootNode().rightChild, null);
+        assertEquals(redBlackTree.getRootNode().leftChild.leftChild, null);
+        assertEquals(redBlackTree.getRootNode().leftChild.rightChild, null);
     }
 }

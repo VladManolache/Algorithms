@@ -1,5 +1,5 @@
 
-package algorithms.sort.redwhiteblue;
+package algorithms.trees.rwb;
 
 /**
  *
