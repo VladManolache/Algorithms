@@ -5,9 +5,9 @@ package algorithms.trees.bst;
  *
  * @author Vlad Manolache
  */
-public class BinarySearchTree {
+public class BST {
 
-    BSTNode rootNode;  // Root node of binary tree.
+    private BSTNode rootNode;  // Root node of binary tree.
 
     public BSTNode getRootNode() {
         return rootNode;

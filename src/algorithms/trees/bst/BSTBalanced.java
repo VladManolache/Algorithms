@@ -1,10 +1,10 @@
-package algorithms.trees.bst.balanced;
+package algorithms.trees.bst;
 
 /**
  *
  * @author Vlad Manolache
  */
-public class BinarySearchTree {
+public class BSTBalanced {
     
     public BSTNode root;
     
@@ -14,12 +14,12 @@ public class BinarySearchTree {
             return true;
         }
         
-        int lh = height(node.left);
-        int rh = height(node.right);
+        int lh = height(node.leftChild);
+        int rh = height(node.rightChild);
         
         if (Math.abs(lh - rh) <= 1 && 
-                isBalanced(node.left) && 
-                isBalanced(node.right)) {
+                isBalanced(node.leftChild) && 
+                isBalanced(node.rightChild)) {
             return true;
         }
         
@@ -31,13 +31,13 @@ public class BinarySearchTree {
             return 0;
         }
         
-        int lh = height(node.left);
-        int rh = height(node.right);
+        int lh = height(node.leftChild);
+        int rh = height(node.rightChild);
         return 1 + (lh > rh ? lh : rh);
     }
     
     public boolean isBalanced() {
-        if (isBalanced(root)) {
+        if ( isBalanced(root) ) {
             System.out.println("Tree is balanced");
             return true;
         }
