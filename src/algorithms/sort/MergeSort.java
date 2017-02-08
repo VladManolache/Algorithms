@@ -14,7 +14,7 @@ public class MergeSort {
     private void mergeSort(int[] S, int low, int high) {
         
         if (low < high) {
-            int middle = low + (high - low) / 2;  // Avoid potential buffer overflow.
+            int middle = low + (high - low) / 2;  // Important - correctly calculate middle.
             mergeSort(S, low, middle);
             mergeSort(S, middle + 1, high);
             merge(S, low, middle, high);
@@ -29,10 +29,9 @@ public class MergeSort {
         for (int i = low; i <= high; i++) {
             tempMergArr[i] = S[i];
         }
-
         
         // Copy the smallest values from either the left or the right side back 
-        // to the original array.
+        //  to the original array.
         int i = low;
         int j = middle + 1;
         int k = low;

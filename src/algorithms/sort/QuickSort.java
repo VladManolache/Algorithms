@@ -30,16 +30,16 @@ public class QuickSort {
         int aux; 
         
         // We need to get a random index between l and h to avoid bad performance
-        // in the case that the array is already sorted.
+        //  in the case that the array is already sorted.
         int value = rand.nextInt(h - l + 1) + l; 
         int pivot = S[value];
         
         while (i <= j) {
             /**
              * In each iteration, we will identify a number from left side which
-             * is greater then the pivot value, and also we will identify a number
-             * from right side which is less then the pivot value. Once the search
-             * is done, then we exchange both numbers.
+             *  is greater then the pivot value, and also we will identify a number
+             *  from right side which is less then the pivot value. Once the search
+             *  is done, then we exchange both numbers.
              */ 
             while (S[i] < pivot) {
                 i++;
@@ -96,8 +96,8 @@ public class QuickSort {
         }
         
         // Swap pivot with S[firsthigh]. Since we have moved everything bigger
-        // than S[p] to the right, this will mean all elements to the left of 
-        // S[p] will be smaller than S[p].
+        //  than S[p] to the right, this will mean all elements to the left of 
+        //  S[p] will be smaller than S[p].
         aux = S[p];
         S[p] = S[leftWall];
         S[leftWall] = aux; 
