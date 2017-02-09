@@ -13,7 +13,7 @@ public class TwoSumTest {
     public void mainTest() {
         int[] numbers = { 2, 7, 11, 15 };
         TwoSum twoSum = new TwoSum();
-        System.out.println(Arrays.toString(twoSum.getTwoSum(9, numbers)));
+        Arrays.equals(twoSum.getTwoSum(9, numbers), new int[]{0, 1});
     }
     
 }
