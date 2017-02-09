@@ -4,25 +4,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- *
+ * Given an array of integers, find a contiguous sub-array which has the largest sum.
+ * 
+ * Example:
+ * Given the array [-2, 2, -3, 4, -1, 2, 1, -5, 3], the contiguous sub-array [4,-1, 2, 1] 
+ *  has the largest sum = 6.
+ * 
  * @author Vlad Manolache
  */
 public class LongestIncreasingSubsequence {
- 
-    
-    public static void main(String[] args) {
-        
-        int[] S = {2,4,3,5,1,7,6,9,8};
-        int n = S.length;
-        System.out.print("S = ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(S[i] + " ");
-        } 
-        
-        longestIncreasingSubsequence(S);
-    }
     
     public static Object[] longestIncreasingSubsequence(int[] S) {
+        // initialise the length and position arrays. Initially, each 
+        //  element is it's own sub-array.
         int n = S.length;
         int[] l = new int[n];
         int[] pos = new int[n];
@@ -31,6 +25,7 @@ public class LongestIncreasingSubsequence {
             pos[i] = -1;
         }
         
+        // build length and position arrays
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < i; j++) {
                 if (S[j] < S[i] && l[j] + 1 > l[i]) {
@@ -51,6 +46,7 @@ public class LongestIncreasingSubsequence {
             System.out.print(pos[i] + " ");
         } 
         
+        // pick maximum. 
         int maxIndex = 0;
         int maxValue = 0;
         for (int i = 0; i < n; i++) {
@@ -60,18 +56,19 @@ public class LongestIncreasingSubsequence {
             }
         } 
         
+        // print solution.
         System.out.println();
         System.out.print("Max substring = ");
         ArrayList<Integer> solution = new ArrayList<>();
         int nextIndex = maxIndex;
         while(nextIndex != -1) {
-            solution.add(S[nextIndex]);
+            solution.add( S[nextIndex] );
             nextIndex = pos[nextIndex];
         }
-        
         Collections.reverse(solution);
         System.out.println(solution);
         
         return solution.toArray();
     }
+    
 }
