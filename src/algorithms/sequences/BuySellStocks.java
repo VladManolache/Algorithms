@@ -36,7 +36,7 @@ public class BuySellStocks {
         int max = prices[n - 1];
         for (int i = n - 2; i > 0; i--) {
             max = Math.max(prices[i], max);
-            right[i] = Math.max(right[i+1], max - prices[i]);
+            right[i] = Math.max(right[i + 1], max - prices[i]);
         }
         System.out.println(Arrays.toString(right));    
  
