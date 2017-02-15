@@ -1,7 +1,8 @@
 package algorithms.queue;
 
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -15,34 +16,43 @@ import java.util.Queue;
  */
 public class TopKLargestNumbers {
     
+    /**
+     * Number of elements that should be returned.
+     */
     final private int k;
     
     /**
      * A binary tree is min-ordered if the key in each node is smaller 
      *  than (or equal to) the keys in the two children nodes (if any).
      */
-    final private Queue<Integer> minPrioirtyQueue;
+    final private Queue<Integer> minPriorityQueue;
     
     public TopKLargestNumbers(int k) {
         this.k = k;
          
-        minPrioirtyQueue = new PriorityQueue<>(k);
+        // use the default element ordering to make this a minPriorityQueue .
+        minPriorityQueue = new PriorityQueue<>(k);
     }
     
     public void add(int number) {
         System.out.println(number);
-        if (minPrioirtyQueue.size() < k) {
-            minPrioirtyQueue.add(number);
+        if (minPriorityQueue.size() < k) {
+            minPriorityQueue.add(number);
         }
-        else if (number > minPrioirtyQueue.peek()) {
-            minPrioirtyQueue.remove();
-            minPrioirtyQueue.add(number); 
+        else if (number > minPriorityQueue.peek()) {
+            minPriorityQueue.remove();
+            minPriorityQueue.add(number); 
         } 
         
-        System.out.println(minPrioirtyQueue);
+        System.out.println(minPriorityQueue);
     }
     
-    public int topK() {
-        return minPrioirtyQueue.peek();
+    public List<Integer> topK() {
+        List<Integer> result = new ArrayList<>();
+        for (int x : minPriorityQueue) {
+            result.add(x);
+        }
+        Collections.sort(result, Collections.reverseOrder());
+        return result;
     }
 }

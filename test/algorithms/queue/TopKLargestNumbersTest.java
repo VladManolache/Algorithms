@@ -1,5 +1,6 @@
 package algorithms.queue;
 
+import java.util.ArrayList;
 import org.junit.Test;
 
 /**
@@ -19,7 +20,12 @@ public class TopKLargestNumbersTest {
         topKLargestNumbers.add(12);
         topKLargestNumbers.add(19);
         
-        assert(topKLargestNumbers.topK() == 12);
+        ArrayList<Integer> expectedResult = new ArrayList();
+        expectedResult.add(19);
+        expectedResult.add(15);
+        expectedResult.add(12);
+
+        assert(topKLargestNumbers.topK().equals(expectedResult));
     }
     
 }
