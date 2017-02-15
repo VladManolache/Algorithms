@@ -1,5 +1,6 @@
 package algorithms.sort;
 
+import algorithms.utils.Interval;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

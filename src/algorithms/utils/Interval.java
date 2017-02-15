@@ -1,11 +1,13 @@
-package algorithms.sort;
+package algorithms.utils;
 
 /**
- *
- * @author user
+ * Structure used to represent integer intervals.
+ *  
+ * @author Vlad Manolache
  */
 public class Interval {
-    int start, end;
+    
+    public int start, end;
        
     public Interval(int start, int end) {
         this.start = start;
