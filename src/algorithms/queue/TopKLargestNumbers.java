@@ -30,12 +30,14 @@ public class TopKLargestNumbers {
     public TopKLargestNumbers(int k) {
         this.k = k;
          
-        // use the default element ordering to make this a minPriorityQueue .
+        // use the default element ordering to make this a minPriorityQueue.
         minPriorityQueue = new PriorityQueue<>(k);
     }
     
     public void add(int number) {
         System.out.println(number);
+        
+        // use the min priority queue to store the K largest elements. 
         if (minPriorityQueue.size() < k) {
             minPriorityQueue.add(number);
         }
