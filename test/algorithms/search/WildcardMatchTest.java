@@ -14,7 +14,8 @@ public class WildcardMatchTest {
     WildcardMatch wildcardMatch = new WildcardMatch();
     
     public boolean executeMatch(String str, String pattern) {
-        return wildcardMatch.match_recursive(str, pattern);
+        return wildcardMatch.match(str, pattern) &&
+                wildcardMatch.match_recursive(str, pattern);
     }
     
     @Test
@@ -137,13 +138,8 @@ public class WildcardMatchTest {
             "*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a*") == false);
         assert(executeMatch("abc*abcd*abcde*abcdef*abcdefg*abcdefgh*abcdefghi*abcdefghij*abcdefghijk*abcdefghijkl*abcdefghijklm*abcdefghijklmn", 
             "abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*") == false);
-        assert(executeMatch("abc*abcd*abcde*abcdef*abcdefg*abcdefgh*abcdefghi*abcdefghij*abcdefghijk*abcdefghijkl*abcdefghijklm*abcdefghijklmn", 
-            "abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*") == false);
         assert(executeMatch("abc*abcd*abcd*abc*abcd", "abc*abc*abc*abc*abc") == 
             false);
-        assert(executeMatch(
-            "abc*abcd*abcd*abc*abcd*abcd*abc*abcd*abc*abc*abcd", 
-            "abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abcd") == false);
         assert(executeMatch("abc", "********a********b********c********") == 
             true);
         assert(executeMatch("********a********b********c********", "abc") == 
@@ -151,5 +147,13 @@ public class WildcardMatchTest {
         assert(executeMatch("abc", "********a********b********b********") == 
             false);
         assert(executeMatch("*abc*", "***a*b*c***") == true);
+    }
+    
+    @Test
+    public void testOperationOrder() {
+        assert(executeMatch("abc*abcd*abcde*abcdef*abcdefg*abcdefgh*abcdefghi*abcdefghij*abcdefghijk*abcdefghijkl*abcdefghijklm*abcdefghijklmn", 
+            "abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*") == true);
+        assert(executeMatch("abc*abcd*abcd*abc*abcd*abcd*abc*abcd*abc*abc*abcd", 
+            "abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abcd") == true);
     }
 }

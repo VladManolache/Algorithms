@@ -25,7 +25,7 @@ public class TopKFrequentWordsTest {
         List<String> expectedResult = new ArrayList<>();
         expectedResult.add("code");
         expectedResult.add("lint");
-        expectedResult.add("baby"); 
+        expectedResult.add("yes");         
         assert(result.equals(expectedResult));
     }
     
