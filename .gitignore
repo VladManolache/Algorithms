@@ -16,3 +16,5 @@ nbproject/
 build.xml
 manifest.mf
 build/
+.jacocoverage
+jacoco.exec-80594896525859

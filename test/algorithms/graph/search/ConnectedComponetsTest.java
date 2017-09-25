@@ -5,6 +5,7 @@
  */
 package algorithms.graph.search;
  
+import algorithms.utils.PathUtils;
 import org.junit.Assert;
 import org.junit.Test; 
 
@@ -16,7 +17,7 @@ public class ConnectedComponetsTest {
      
     @Test
     public void mainTest() {
-        ConnectedComponents connectedComponents = new ConnectedComponents("C:\\Users\\vmanolache\\Documents\\NetBeansProjects\\Algorithms\\test\\algorithms\\graph\\connectedComponents.txt", false);
+        ConnectedComponents connectedComponents = new ConnectedComponents(PathUtils.getPath() + "graph/connectedComponents.txt", false);
         int count = connectedComponents.connectedComponents();
         
         Assert.assertEquals(count, 3);

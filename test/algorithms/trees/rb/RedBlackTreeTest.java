@@ -5,8 +5,6 @@
  */
 package algorithms.trees.rb;
  
-import algorithms.trees.rb.RedBlackTree;
-import algorithms.trees.rb.RBNode;
 import java.util.ArrayList; 
 import org.junit.Test;
 import static org.junit.Assert.*;

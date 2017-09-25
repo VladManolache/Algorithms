@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /** 
- * sGiven a set S of n integers and an integer T , give an O(n^(k−1) log n) algorithm
+ * Given a set S of n integers and an integer T, give an O(n^(k−1) log n) algorithm
  * to test whether k of the integers in S add up to T.
  * 
  * @author Vlad Manolache

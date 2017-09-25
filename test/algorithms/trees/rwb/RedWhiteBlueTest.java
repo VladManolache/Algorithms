@@ -5,8 +5,6 @@
  */
 package algorithms.trees.rwb;
  
-import algorithms.trees.rwb.RedWhiteBlueSort;
-import algorithms.trees.rwb.RedWhiteBlueNode;
 import java.util.Random; 
 import org.junit.Test;
 import static org.junit.Assert.*;
