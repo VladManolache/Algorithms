@@ -14,8 +14,9 @@ public class WildcardMatchTest {
     WildcardMatch wildcardMatch = new WildcardMatch();
     
     public boolean executeMatch(String str, String pattern) {
-        return wildcardMatch.match(str, pattern) &&
-                wildcardMatch.match_recursive(str, pattern);
+        return wildcardMatch.match_dp(str, pattern) &&
+                wildcardMatch.match_recursive(str, pattern) &&
+                wildcardMatch.match_iterative(str, pattern);
     }
     
     @Test
@@ -75,7 +76,8 @@ public class WildcardMatchTest {
             assert(executeMatch(entry.getKey(), entry.getValue()) == false);
         }
     }
-    
+   
+    @Test
     public void testCasesWithRepeatingCharacterSequences() {
         assert(executeMatch("abcccd", "*ccd") == true);
         assert(executeMatch("mississipissippi", "*issip*ss*") == true);
