@@ -86,7 +86,7 @@ public class MatrixRotate {
                 matrix[j][n-1-i] = matrix[n-1-i][n-1-j];
                 // move values from left to bottom
                 matrix[n-1-i][n-1-j] = matrix[n-1-j][i];
-                // assign temp to left
+                // assign temp to right
                 matrix[n-1-j][i] = tmp;
             }
         }
