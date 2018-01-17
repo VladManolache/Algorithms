@@ -9,9 +9,9 @@
  *
  * There is a linear-time solution.
  */
-package algorithms.trees.rwb;
+package algorithms.other;
 
-import algorithms.trees.rwb.RedWhiteBlueNode.Color;
+import algorithms.other.RedWhiteBlueNode.Color;
 
 /**
  *

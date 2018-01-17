@@ -45,10 +45,9 @@ public class LoopLocation {
          */ 
         do {
             head = head.getNextNode().getNextNode();
-            tail = tail.getNextNode();
+            tail = tail.getNextNode();        
             
-            System.out.println(head.getValue() + " " + tail.getValue());
-        } while(head.getNextNode() != null && head != tail);
+        } while(head != null && head.getNextNode() != null && head != tail);
         
         // If there exists a loop, find the position of the loop.
         if (head == tail) {

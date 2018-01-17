@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class LoopLocationTest {
 
     @Test
-    public void mainTest() {
+    public void test7ValuesLoop() {
         SimpleListNode startNode = new SimpleListNode(0, null);
         LoopLocation list = new LoopLocation(startNode);
 
@@ -23,5 +23,35 @@ public class LoopLocationTest {
         node.setNextNode(startNode.getNextNode().getNextNode());  // Create loop 
 
         assertTrue(list.detectLoopPosition() == 2);
+    }
+    
+    @Test
+    public void test10ValuesLoop() {
+        SimpleListNode startNode = new SimpleListNode(0, null);
+        LoopLocation list = new LoopLocation(startNode);
+
+        SimpleListNode node = null;
+        for (int i = 1; i < 10; i++) {
+            node = new SimpleListNode(i, null);
+            list.addNode(node);
+        }
+        SimpleListNode loopNode = startNode.getNextNode().getNextNode().getNextNode().getNextNode();
+        node.setNextNode(loopNode);  // Create loop 
+
+        assertTrue(list.detectLoopPosition() == 4);
+    }
+    
+    @Test
+    public void testNoLoop() {
+        SimpleListNode startNode = new SimpleListNode(0, null);
+        LoopLocation list = new LoopLocation(startNode);
+
+        SimpleListNode node;
+        for (int i = 1; i < 10; i++) {
+            node = new SimpleListNode(i, null);
+            list.addNode(node);
+        }
+        
+        assertTrue(list.detectLoopPosition() == -1);
     }
 }
