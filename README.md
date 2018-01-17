@@ -1,6 +1,5 @@
 # Algorithms
 
-Problems implemented:
 Graph:
 - BFS
 - DFS
