@@ -1,4 +1,4 @@
-# ArchitectureProposal-V1
+# Algorithms
 
 Problems implemented:
 Graph:
