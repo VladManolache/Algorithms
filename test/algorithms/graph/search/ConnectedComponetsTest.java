@@ -6,8 +6,11 @@
 package algorithms.graph.search;
  
 import algorithms.utils.PathUtils;
-import org.junit.Assert;
-import org.junit.Test; 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  *
@@ -20,6 +23,6 @@ public class ConnectedComponetsTest {
         ConnectedComponents connectedComponents = new ConnectedComponents(PathUtils.getPath() + "graph/connectedComponents.txt", false);
         int count = connectedComponents.connectedComponents();
         
-        Assert.assertEquals(count, 3);
+        assertEquals(count, 3);
     }
 }

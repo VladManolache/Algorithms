@@ -1,7 +1,8 @@
 package algorithms.sequences;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
-import org.junit.Test;
 
 /**
  *

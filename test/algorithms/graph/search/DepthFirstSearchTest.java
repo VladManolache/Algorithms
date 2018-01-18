@@ -2,8 +2,9 @@
 package algorithms.graph.search;
  
 import algorithms.utils.PathUtils;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  *

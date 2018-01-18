@@ -1,10 +1,11 @@
 package algorithms.sort;
 
 import algorithms.utils.Interval;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import org.junit.Test;
 
 /**
  *

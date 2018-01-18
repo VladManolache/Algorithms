@@ -1,11 +1,15 @@
 
 package algorithms.sort;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 import java.util.Random;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  *
@@ -17,7 +21,7 @@ public class MergeSortTest {
     int SIZE = 10000;
     int MAX_NUMBER = 1000;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         numbers = new int[SIZE];
         Random generator = new Random();

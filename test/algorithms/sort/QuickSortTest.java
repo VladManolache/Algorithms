@@ -1,9 +1,13 @@
 package algorithms.sort;
  
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import java.util.Random;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
 
 /**
  *
@@ -15,7 +19,7 @@ public class QuickSortTest {
     int SIZE = 100000;
     int MAX_NUMBER = 1000;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         numbers = new int[SIZE];
         Random generator = new Random();
@@ -91,7 +95,7 @@ public class QuickSortTest {
         long startTime = System.currentTimeMillis();
  
         // Warning - Having an array of 100000 elements produces a stack overflow error.
-        int[] numbersWorstCase = new int[10000];   
+        int[] numbersWorstCase = new int[1000];
         for (int i = 0; i < numbersWorstCase.length; i++) {
             numbersWorstCase[i] = i;
         }

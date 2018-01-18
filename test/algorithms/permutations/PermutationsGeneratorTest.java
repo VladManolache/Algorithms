@@ -1,8 +1,9 @@
 package algorithms.permutations;
 
 import algorithms.math.FactorialCalculator;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
-import org.junit.Test;
 
 /**
  *

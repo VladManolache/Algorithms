@@ -1,7 +1,8 @@
 package algorithms.queue;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
-import org.junit.Test;
 
 /**
  *

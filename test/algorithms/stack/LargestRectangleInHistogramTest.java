@@ -1,6 +1,7 @@
 package algorithms.stack;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -8,12 +9,12 @@ import org.junit.Test;
  */
 public class LargestRectangleInHistogramTest {
     
-//    @Test
-//    public void mainTest_V1() {
-//        int[] heights = new int[] {2,1,5,6,2,3};
-//        LargestRectangleInHistogram largestRectangleInHistogram = new LargestRectangleInHistogram();
-//        assert(largestRectangleInHistogram.getLargestRectangle(heights) == 10);
-//    }
+    @Test
+    public void mainTest_V1() {
+        int[] heights = new int[] {2,1,5,6,2,3};
+        LargestRectangleInHistogram largestRectangleInHistogram = new LargestRectangleInHistogram();
+        assert(largestRectangleInHistogram.getLargestRectangle(heights) == 10);
+    }
     
     @Test
     public void mainTest_V2() {
@@ -22,11 +23,11 @@ public class LargestRectangleInHistogramTest {
         assert(largestRectangleInHistogram.getLargestRectangle(heights) == 12);
     }
     
-//    @Test
-//    public void secondaryTest() {
-//        int[] heights = new int[] {2,1,2,3,1};
-//        LargestRectangleInHistogram largestRectangleInHistogram = new LargestRectangleInHistogram();
-//        assert(largestRectangleInHistogram.getLargestRectangle(heights) == 4);
-//    }
+    @Test
+    public void secondaryTest() {
+        int[] heights = new int[] {2,1,2,3,1};
+        LargestRectangleInHistogram largestRectangleInHistogram = new LargestRectangleInHistogram();
+        assert(largestRectangleInHistogram.getLargestRectangle(heights) == 4);
+    }
     
 }

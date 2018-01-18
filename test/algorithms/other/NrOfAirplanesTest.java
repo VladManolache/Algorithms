@@ -1,8 +1,9 @@
 package algorithms.other;
 
 import algorithms.utils.Interval;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
-import org.junit.Test;
 
 /**
  *

@@ -2,7 +2,7 @@
 package algorithms.graph;
 
 import algorithms.utils.PathUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  *

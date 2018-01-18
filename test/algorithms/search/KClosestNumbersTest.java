@@ -5,8 +5,9 @@
  */
 package algorithms.search;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
-import org.junit.Test;
 
 /**
  *

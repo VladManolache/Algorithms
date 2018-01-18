@@ -5,10 +5,11 @@
  */
 package algorithms.sequences;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import org.junit.Test;
 
 /**
  *

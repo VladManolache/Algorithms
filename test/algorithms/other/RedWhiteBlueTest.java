@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package algorithms.other;
- 
-import algorithms.other.RedWhiteBlueSort;
-import algorithms.other.RedWhiteBlueNode;
-import java.util.Random; 
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
@@ -46,7 +46,7 @@ public class RedWhiteBlueTest {
         
         // Make sore that all nodes are in order.
         for (int i = 0; i < nodes.length - 1; i++) { 
-            assertTrue(nodes[i].getColor().compareTo(nodes[i+1].getColor()) <= 0); 
+            assertTrue(nodes[i].getColor().compareTo(nodes[i+1].getColor()) <= 0);
         }
      }
 }
