@@ -11,11 +11,11 @@ import java.util.ArrayList;
 public class ThreeSumTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         int[] numbers = new int[] {-1, 0, 1, 2, -1, -4};
         ThreeSum threeSum = new ThreeSum();
         
-        ArrayList<ArrayList<Integer>> expectedResults = new ArrayList();
+        ArrayList<ArrayList<Integer>> expectedResults = new ArrayList<>();
         ArrayList<Integer> firstResult = new ArrayList<>();
         firstResult.add(-1);
         firstResult.add(-1);

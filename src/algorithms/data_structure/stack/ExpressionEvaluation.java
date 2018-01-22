@@ -30,7 +30,7 @@ public class ExpressionEvaluation {
     }
     
     private int evaluate(List<String> postfixExpression) {
-        Stack<String> stack = new Stack();
+        Stack<String> stack = new Stack<>();
                 
         int first;
         int second;
@@ -81,7 +81,7 @@ public class ExpressionEvaluation {
     
     private List<String> infixToPostfix(String[] expression) {
         Stack<String> operatorStack = new Stack<>(); 
-        ArrayList<String> output = new ArrayList();
+        ArrayList<String> output = new ArrayList<>();
          
         System.out.println("Infix to Postfix:" + Arrays.toString(expression));
         for ( String operator : expression) {

@@ -12,7 +12,7 @@ import java.util.List;
 public class TopKFrequentWordsTest {
     
     @Test
-    public void mainTest_V1() {
+    void mainTest_V1() {
         String[] words = new String[] {
             "yes", "lint", "code",
             "yes", "code", "baby",
@@ -31,7 +31,7 @@ public class TopKFrequentWordsTest {
     }
     
     @Test
-    public void mainTest_V2() {
+    void mainTest_V2() {
         String[] words = new String[] {
             "yes", "lint", "code",
             "yes", "code", "baby",

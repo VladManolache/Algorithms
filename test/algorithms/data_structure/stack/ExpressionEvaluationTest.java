@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class ExpressionEvaluationTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         String[] expression = new String[] { 
             "2", "*", "6", "-", "(", 
             "23", "+", "7", ")", "/", 
@@ -23,7 +23,7 @@ public class ExpressionEvaluationTest {
     }
     
     @Test
-    public void simpleTest_V1() {
+    void simpleTest_V1() {
         String[] expression = new String[] { 
             "(", "5", "+", "7", ")", "*", "2"
         };
@@ -34,7 +34,7 @@ public class ExpressionEvaluationTest {
     }
     
     @Test
-    public void simpleTest_V2() {
+    void simpleTest_V2() {
         String[] expression = new String[] { 
             "5", "+", "7", "/", "2"
         };

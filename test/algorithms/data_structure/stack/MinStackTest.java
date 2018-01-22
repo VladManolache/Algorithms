@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class MinStackTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         MinStack minStack = new MinStack();
         minStack.push(1);
         minStack.pop();
@@ -20,7 +20,7 @@ public class MinStackTest {
     }
     
     @Test
-    public void secondTest() {
+    void secondTest() {
         MinStack minStack = new MinStack();
         minStack.push(1);
         minStack.pop();

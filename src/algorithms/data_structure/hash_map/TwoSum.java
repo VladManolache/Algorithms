@@ -1,4 +1,4 @@
-package algorithms.sequences.two_pointers;
+package algorithms.data_structure.hash_map;
 
 import java.util.HashMap;
 
@@ -23,7 +23,7 @@ public class TwoSum {
             return new int[] {};
         }
         
-        HashMap<Integer, Integer> map = new HashMap();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
             if ( map.containsKey(numbers[i]) ) {
                 return new int[] { map.get(numbers[i]), i };

@@ -39,10 +39,8 @@ public class LoopLocation {
         SimpleListNode head = this.start;
         SimpleListNode tail = this.start;
         
-        /** 
-         * Advance the two pointers at different speeds.
-         * Two things can happen: either they meet -> loop or they do not, no loop.
-         */ 
+        // Advance the two pointers at different speeds.
+        // Two things can happen: either they meet -> loop or they do not, no loop.
         do {
             head = head.getNextNode().getNextNode();
             tail = tail.getNextNode();        

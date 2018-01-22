@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class TopKLargestNumbersTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         TopKLargestNumbers topKLargestNumbers = new TopKLargestNumbers(3);
         topKLargestNumbers.add(10);
         topKLargestNumbers.add(15);
@@ -21,7 +21,7 @@ public class TopKLargestNumbersTest {
         topKLargestNumbers.add(12);
         topKLargestNumbers.add(19);
         
-        ArrayList<Integer> expectedResult = new ArrayList();
+        ArrayList<Integer> expectedResult = new ArrayList<>();
         expectedResult.add(19);
         expectedResult.add(15);
         expectedResult.add(12);

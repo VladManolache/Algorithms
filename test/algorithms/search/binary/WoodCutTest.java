@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class WoodCutTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         int[] values = new int[] {232, 124, 456};
         int k = 7;
         WoodCut woodCut = new WoodCut();

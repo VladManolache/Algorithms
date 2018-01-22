@@ -1,4 +1,4 @@
-package algorithms.bit_manipulation;
+package algorithms.bit_manipulation.merge_m_into_n;
 
 import org.junit.jupiter.api.Test;
 

@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class LongestIncreasingSubsequenceTest {
 
     @Test
-    public void mainTest() {
+    void mainTest() {
         int[] S = {2, 4, 3, 5, 1, 7, 6, 9, 8};
         int n = S.length;
         System.out.print("S = ");

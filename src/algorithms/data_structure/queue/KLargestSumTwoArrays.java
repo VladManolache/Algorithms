@@ -64,13 +64,7 @@ public class KLargestSumTwoArrays {
             return Integer.MIN_VALUE;
         }
         
-        minQueue = new PriorityQueue<>(Math.min(Math.min(n, m), k),
-            new Comparator<SumType>() {
-                @Override
-                public int compare(SumType a, SumType b) {
-                    return a.sum - b.sum;
-                }
-        });
+        minQueue = new PriorityQueue<>(Math.min(Math.min(n, m), k), Comparator.comparingInt(a -> a.sum));
         
         SumType temp = new SumType(0, 0, array1[0] + array2[0]);
         Set<SumType> uniqueValues = new HashSet<>();

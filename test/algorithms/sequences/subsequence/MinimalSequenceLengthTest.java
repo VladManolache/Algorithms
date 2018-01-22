@@ -1,6 +1,5 @@
 package algorithms.sequences.subsequence;
 
-import algorithms.sequences.subsequence.MinimalSequenceLength;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

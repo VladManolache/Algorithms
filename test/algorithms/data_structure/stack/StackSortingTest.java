@@ -11,8 +11,8 @@ import java.util.Stack;
 public class StackSortingTest {
     
     @Test
-    public void mainTest_V1() {
-        Stack<Integer> stack = new Stack();
+    void mainTest_V1() {
+        Stack<Integer> stack = new Stack<>();
         stack.add(4);
         stack.add(10);
         stack.add(15);
@@ -21,7 +21,7 @@ public class StackSortingTest {
         stack.add(3);
         stack.add(1);
          
-        Stack<Integer> sortedStack = new Stack();
+        Stack<Integer> sortedStack = new Stack<>();
         sortedStack.add(15);
         sortedStack.add(10);
         sortedStack.add(5); 

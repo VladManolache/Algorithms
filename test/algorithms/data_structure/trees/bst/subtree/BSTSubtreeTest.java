@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class BSTSubtreeTest {
     
     @Test
-    public void isSubtreeTest() {
+    void isSubtreeTest() {
         
         // Add values to binary search tree.
         BST tree1 = new BST();
@@ -42,7 +42,7 @@ public class BSTSubtreeTest {
     }
     
     @Test
-    public void isNotSubtree() {
+    void isNotSubtree() {
         
         // Add values to binary search tree.
         BST tree1 = new BST();

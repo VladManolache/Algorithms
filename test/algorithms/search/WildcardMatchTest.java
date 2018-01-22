@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class WildcardMatchTest {
     
-    WildcardMatch wildcardMatch = new WildcardMatch();
+    private WildcardMatch wildcardMatch = new WildcardMatch();
     
     boolean executeMatch(String str, String pattern) {
         return wildcardMatch.match_dp(str, pattern) &&

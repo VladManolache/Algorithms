@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LoopLocationTest {
 
     @Test
-    public void test7ValuesLoop() {
+    void test7ValuesLoop() {
         SimpleListNode startNode = new SimpleListNode(0, null);
         LoopLocation list = new LoopLocation(startNode);
 
@@ -27,7 +27,7 @@ public class LoopLocationTest {
     }
     
     @Test
-    public void test10ValuesLoop() {
+    void test10ValuesLoop() {
         SimpleListNode startNode = new SimpleListNode(0, null);
         LoopLocation list = new LoopLocation(startNode);
 
@@ -43,7 +43,7 @@ public class LoopLocationTest {
     }
     
     @Test
-    public void testNoLoop() {
+    void testNoLoop() {
         SimpleListNode startNode = new SimpleListNode(0, null);
         LoopLocation list = new LoopLocation(startNode);
 

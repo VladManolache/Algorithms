@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class QueueByTwoStacksTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         QueueByTwoStacks queueByTwoStacks = new QueueByTwoStacks();
         queueByTwoStacks.push(1);
         queueByTwoStacks.pop();

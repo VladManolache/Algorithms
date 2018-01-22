@@ -52,10 +52,8 @@ public class ThreeSum {
                 }
             }
         }
-        
-        for (ArrayList<Integer> temp : hset) {
-            res.add(temp);
-        }
+
+        res.addAll(hset);
         
         return res;
     }

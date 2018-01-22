@@ -18,8 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class BinaryHeapTest {
 
     @Test
-    public void deleteTest() {
-        BinaryHeap<String> h = new BinaryHeap(); 
+    void deleteTest() {
+        BinaryHeap<String> h = new BinaryHeap<>();
         h.insert("p");
         h.insert("r");
         h.insert("i");
@@ -31,7 +31,7 @@ public class BinaryHeapTest {
     }
     
     @Test
-    public void heapSortTest() { 
+    void heapSortTest() {
         BinaryHeap<Integer> tmp = new BinaryHeap<>();
         Integer[] a = {4,7,7,7,5,0,2,3,5,1};
         tmp.heapSort(a);

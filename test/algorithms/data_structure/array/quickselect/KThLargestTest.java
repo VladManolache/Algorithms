@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class KThLargestTest {
     
     @Test
-    public void testSimple() {
+    void testSimple() {
         int[] nums = {1, 2, 3, 4, 5};
         KThLargest kLargest = new KThLargest();
         
@@ -18,7 +18,7 @@ public class KThLargestTest {
     }
     
     @Test
-    public void testKthLargest() {
+    void testKthLargest() {
         int[] nums = {9, 3, 2, 4, 8};
         KThLargest kLargest = new KThLargest();
         

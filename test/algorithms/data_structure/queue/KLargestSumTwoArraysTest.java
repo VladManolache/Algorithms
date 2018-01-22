@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class KLargestSumTwoArraysTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         int[] array1 = new int[] {1, 7, 11}; 
         int[] array2 = new int[] {2, 4, 6};
         KLargestSumTwoArrays kLargestSumTwoArrays = new KLargestSumTwoArrays(8);

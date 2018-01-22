@@ -5,8 +5,6 @@
  */
 package algorithms.sort.redwhiteblue;
 
-import algorithms.sort.redwhiteblue.RedWhiteBlueNode;
-import algorithms.sort.redwhiteblue.RedWhiteBlueSort;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
