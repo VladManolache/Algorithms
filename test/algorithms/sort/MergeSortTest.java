@@ -22,7 +22,7 @@ public class MergeSortTest {
     int MAX_NUMBER = 1000;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    void setUp() throws Exception {
         numbers = new int[SIZE];
         Random generator = new Random();
         for (int i = 0; i < numbers.length; i++) {
@@ -31,7 +31,7 @@ public class MergeSortTest {
     }
 
     @Test
-    public void testMergeSort() {
+    void testMergeSort() {
         long startTime = System.currentTimeMillis();
 
         MergeSort sorter = new MergeSort();
@@ -50,7 +50,7 @@ public class MergeSortTest {
     }
 
     @Test
-    public void testStandardSort() {
+    void testStandardSort() {
         long startTime = System.currentTimeMillis();
         Arrays.sort(numbers);
         long stopTime = System.currentTimeMillis();

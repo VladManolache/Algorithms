@@ -1,13 +1,13 @@
 package algorithms.sort;
 
-import algorithms.utils.Interval;
+import algorithms.common.Interval;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 /**
  * Given a collection of intervals, merge all overlapping intervals.
+ *
  * Example:
  * Given intervals => merged intervals:
  * [                     [
@@ -23,7 +23,8 @@ public class MergeIntervals {
      
     /**
      * @param intervals, a collection of intervals
-     * @return: A new sorted interval list.
+     *
+     * @return A new sorted interval list.
      */
     public List<Interval> merge(List<Interval> intervals) {
         
@@ -31,12 +32,7 @@ public class MergeIntervals {
             return intervals;
         }
         
-        Collections.sort(intervals, new Comparator<Interval>() {
-           @Override
-           public int compare(Interval a, Interval b) {
-               return a.start - b.start;
-           } 
-        });
+        intervals.sort(Comparator.comparingInt(a -> a.start));
         
         List<Interval> result = new ArrayList<>();
         Interval last = intervals.get(0);

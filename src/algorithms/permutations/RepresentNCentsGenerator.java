@@ -11,7 +11,7 @@ public class RepresentNCentsGenerator {
         
     public int generatePermutations(int cents) {
         HashMap<Integer, Integer> values = new HashMap<>();
-        ArrayList<HashMap<Integer, Integer>> solutions = new ArrayList();
+        ArrayList<HashMap<Integer, Integer>> solutions = new ArrayList<>();
         values.put(1, 0);
         values.put(5, 0);
         values.put(10, 0);

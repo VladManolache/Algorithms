@@ -1,66 +1,45 @@
 # Algorithms
 
-Graph:
-- BFS
-- DFS
-- Connected Components
+### Bit Manipulation
+- Merge M into N
 
-Heaps:
-- Binary Heap
+### Data Structure:
+#### 1) Array
+#### 2) Graph
+#### 3) Heaps
+#### 4) Linked Lists
+#### 5) Matrix
+#### 6) Queue
+#### 7) Stack
+#### 8) Tree
 
-LinkedList:
-- Loop Location
+### Dynamic Programming:
+- Coins in a line
 
-Math:
+### Math:
 - Factorial calculator
 - Product excluding self
 
-Permutations:
-- N-Pair Paranthesis Generator
-- NQueensGenerator
+### Permutation:
+- N Pair Parenthesis Generator
+- N Queens Generator
 - Permutations Generator
-- Represent N Cents Generator
+- PowerSet Generator
+- Represent N cents
 
-Queue:
-- KLargestSum two arrays
-- Top K Frequent Words
-- Top K largest numbers
+### Search:
+###### Binary
+- SumK elements
+- Wildcard Match
 
-Search:
-- K Closest numbers
-- Sqrt
-- WoodCut
+### Sequences
+###### Sub-sequence
+###### Sweep line
+###### Two pointers
+- Reverse Words
 
-Sequences
-- Buy Sell Stocks
-- CoinsInALine
-- Longest increasing subsequence
-- Power set generator
-- Reverse words
-- Sum K
-- Three Sum
-- Trap Rain Water
-- Two Sum
-
-Sort
-- Kth Largest
+### Sort
+- RedWhiteBlue Sort
 - Merge Intervals
-- Merge Sort
+- MergeSort
 - QuickSort
-
-Stack
-- Expression evaluator
-- Largest Rectangle in Histogram
-- MinStack
-- Queue by two stacks
-- Stack sorting
-
-Trees
-- BST
-- Red Black Tree
-
-Other
-- Matrix rotate
-- Nr of airplanes
-- Wildcard match
-

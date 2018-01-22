@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class NQueensGeneratorTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         NQueensGenerator nQueensGenerator = new NQueensGenerator();
         int count = nQueensGenerator.generateNQueens(8);
         assert(count == 92);

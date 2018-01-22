@@ -12,13 +12,13 @@ import java.util.ArrayList;
 public class PermutationsGeneratorTest {
 
     @Test
-    public void mainTest_v1() {
+    void mainTest_v1() {
         PermutationsGenerator logic = new PermutationsGenerator();
         logic.generatePermutations_v1("abcdefg");
     }
     
     @Test
-    public void mainTest_v2() {
+    void mainTest_v2() {
         String string = "abcdefg";
         PermutationsGenerator permutationsGenerator = new PermutationsGenerator();
         ArrayList<String> result = permutationsGenerator.generatePermutations_v2(string);

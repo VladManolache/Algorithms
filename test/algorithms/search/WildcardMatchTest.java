@@ -1,6 +1,5 @@
 package algorithms.search;
 
-import algorithms.other.WildcardMatch;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -14,14 +13,14 @@ public class WildcardMatchTest {
     
     WildcardMatch wildcardMatch = new WildcardMatch();
     
-    public boolean executeMatch(String str, String pattern) {
+    boolean executeMatch(String str, String pattern) {
         return wildcardMatch.match_dp(str, pattern) &&
                 wildcardMatch.match_recursive(str, pattern) &&
                 wildcardMatch.match_iterative(str, pattern);
     }
     
     @Test
-    public void testMatch() {
+    void testMatch() {
         String str = "baaabab";
         String[] patterns = {
             "*****ba*****ab",
@@ -37,12 +36,12 @@ public class WildcardMatchTest {
         };
         
         for (String pattern : patterns) {
-            assert(executeMatch(str, pattern) == true);
+            assert(executeMatch(str, pattern));
         }
     }
     
     @Test
-    public void testNotMatch() {
+    void testNotMatch() {
         String str = "baaabab";
         String[] patterns = {
             "a*ab",
@@ -57,7 +56,7 @@ public class WildcardMatchTest {
     }
     
     @Test
-    public void testMapMatch() {
+    void testMapMatch() {
         Map<String, String> map = new HashMap();
         map.put("aa", "*aa");
         map.put("aaaaabbbccc", "*aa*c");
@@ -69,7 +68,7 @@ public class WildcardMatchTest {
     }
     
     @Test
-    public void testMapNotMatch() {
+    void testMapNotMatch() {
         Map<String, String> map = new HashMap();
         map.put("aa", "*abc");
         
@@ -79,7 +78,7 @@ public class WildcardMatchTest {
     }
    
     @Test
-    public void testCasesWithRepeatingCharacterSequences() {
+    void testCasesWithRepeatingCharacterSequences() {
         assert(executeMatch("abcccd", "*ccd") == true);
         assert(executeMatch("mississipissippi", "*issip*ss*") == true);
         assert(executeMatch("xxxx*zzzzzzzzy*f", "xxxx*zzy*fffff") == false);
@@ -99,7 +98,7 @@ public class WildcardMatchTest {
     }
     
     @Test
-    public void testStringIncludesWildcard() {
+    void testStringIncludesWildcard() {
         assert(executeMatch("*", "*") == true);
         assert(executeMatch("a*abab", "a*b") == true);
         assert(executeMatch("a*r", "a*") == true);
@@ -107,7 +106,7 @@ public class WildcardMatchTest {
     }
     
     @Test 
-    public void testMixed() {
+    void testMixed() {
         assert(executeMatch("a", "??") == false);
         assert(executeMatch("ab", "?*?") == true);
         assert(executeMatch("ab", "*?*?*") == true);
@@ -121,7 +120,7 @@ public class WildcardMatchTest {
     }
     
     @Test
-    public void testManyWildcards() {
+    void testManyWildcards() {
         assert(executeMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", 
             "a*a*a*a*a*a*aa*aaa*a*a*b") == true); 
         assert(executeMatch("abababababababababababababababababababaacacacacacaacadaeafagahaiajakalaaaaaaaaaaaaaaaaaffafagaagggagaaaaaaaab", 
@@ -153,7 +152,7 @@ public class WildcardMatchTest {
     }
     
     @Test
-    public void testOperationOrder() {
+    void testOperationOrder() {
         assert(executeMatch("abc*abcd*abcde*abcdef*abcdefg*abcdefgh*abcdefghi*abcdefghij*abcdefghijk*abcdefghijkl*abcdefghijklm*abcdefghijklmn", 
             "abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*abc*") == true);
         assert(executeMatch("abc*abcd*abcd*abc*abcd*abcd*abc*abcd*abc*abc*abcd", 

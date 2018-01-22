@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ReverseWordsTest {
 
     @Test
-    public void mainTest() {
+    void mainTest() {
         ReverseWords reverseWords = new ReverseWords();
 
         // Input phrase to reverse.

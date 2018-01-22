@@ -1,6 +1,6 @@
 package algorithms.sort;
 
-import algorithms.utils.Interval;
+import algorithms.common.Interval;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.List;
 public class MergeIntervalsTest {
     
     @Test
-    public void testMergeIntervals() {
+    void testMergeIntervals() {
         MergeIntervals mergeIntervals = new MergeIntervals();
         
         List<Interval> intervals = new ArrayList<>();
@@ -36,7 +36,7 @@ public class MergeIntervalsTest {
         assert(equals(results, desiredResults));
     }
     
-    static <T> boolean equals(Collection<T> lhs, Collection<T> rhs) {
+    private static <T> boolean equals(Collection<T> lhs, Collection<T> rhs) {
         return lhs.size( ) == rhs.size() && lhs.containsAll(rhs)  && rhs.containsAll(lhs);
     }
 }

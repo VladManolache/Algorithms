@@ -13,6 +13,7 @@ public class ReverseWords {
     /**
      * Method that reverses words in a char array by copying words from the initial
      * array to a second array starting with the end of the second array.
+     *
      * @param phrase - input char array
      * @return reversed phrase
      */

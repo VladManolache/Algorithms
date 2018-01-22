@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class ProductExcludingSelfTest {
 
     @Test
-    public void mainTest() {
+    void mainTest() {
         int[] X = {2, 4, 1, 6, 5, 3};
         ProductExcludingSelf productExcludingSelf = new ProductExcludingSelf();
 

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class NPairParanthesisGeneratorTest {
     
     @Test
-    public void mainTest_v2() {
+    void mainTest_v2() {
         NPairParanthesisGenerator nPairParanthesisGenerator = new NPairParanthesisGenerator();
         ArrayList<String> validPermutations = nPairParanthesisGenerator.buildValidPermutations(3);
         assert(validPermutations.size() == 5);

@@ -3,6 +3,7 @@ package algorithms.math;
 /**
  * Calculate the array where each item contains the product of all values 
  * excluding the value in the current position.
+ *
  * Restriction - do not use * or / operators.
  * 
  * @author Vlad Manolache

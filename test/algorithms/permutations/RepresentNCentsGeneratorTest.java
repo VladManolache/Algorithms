@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class RepresentNCentsGeneratorTest {
     
     @Test
-    public void mainTest_v1() {
+    void mainTest_v1() {
         RepresentNCentsGenerator representNCentsGenerator = new RepresentNCentsGenerator();
         assert(representNCentsGenerator.generatePermutations(11) == 4);
     }

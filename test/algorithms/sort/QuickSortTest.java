@@ -15,12 +15,12 @@ import static org.junit.jupiter.api.Assertions.fail;
  */
 public class QuickSortTest {
     
-    int[] numbers;
-    int SIZE = 100000;
-    int MAX_NUMBER = 1000;
+    private int[] numbers;
+    private int SIZE = 100000;
+    private int MAX_NUMBER = 1000;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    void setUp()  {
         numbers = new int[SIZE];
         Random generator = new Random();
         for (int i = 0; i < numbers.length; i++) {
@@ -29,7 +29,7 @@ public class QuickSortTest {
     }
  
     @Test
-    public void testQuickSortV1() {
+    void testQuickSortV1() {
         long startTime = System.currentTimeMillis();
  
         QuickSort sorter = new QuickSort();
@@ -48,7 +48,7 @@ public class QuickSortTest {
     }
     
     @Test
-    public void testQuickSortV1WorstCase() {
+    void testQuickSortV1WorstCase() {
         long startTime = System.currentTimeMillis();
  
         int[] numbersWorstCase = new int[SIZE];   // Fails on larger values.
@@ -72,7 +72,7 @@ public class QuickSortTest {
     }
     
     @Test
-    public void testQuickSortV2() {
+    void testQuickSortV2() {
         long startTime = System.currentTimeMillis();
  
         QuickSort sorter = new QuickSort();
@@ -91,7 +91,7 @@ public class QuickSortTest {
     }
     
     @Test
-    public void testQuickSortV2WorstCase() {
+    void testQuickSortV2WorstCase() {
         long startTime = System.currentTimeMillis();
  
         // Warning - Having an array of 100000 elements produces a stack overflow error.

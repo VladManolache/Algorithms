@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class FactorialGeneratorTest {
     
     @Test
-    public void mainTest() {
+    void mainTest() {
         FactorialCalculator factorialCalculator = new FactorialCalculator();
         assert(factorialCalculator.calculateFactorial(7) == 5040);
     }

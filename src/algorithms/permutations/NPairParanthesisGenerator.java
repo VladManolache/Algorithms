@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class NPairParanthesisGenerator {
     
     public ArrayList<String> buildValidPermutations(int n) {
-        ArrayList<String> list = new ArrayList();
+        ArrayList<String> list = new ArrayList<>();
                 
         generateParanthesis(n, list, "", 0, 0);
         
