@@ -17,7 +17,7 @@ public class PermutationsGenerator {
         buildPermutations_v1(in, out, used, length, 0);
     }
 
-    void buildPermutations_v1(char[] in, StringBuffer out,
+    private void buildPermutations_v1(char[] in, StringBuffer out,
             boolean[] used, int length, int level) {
         if (level == length) {
             return;

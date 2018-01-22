@@ -12,6 +12,8 @@ package algorithms.bit_manipulation.missing_number;
  * Calculate the xor sum from 0 to N
  * Calculate the xor sum for all element in given array
  * Xor these two sums
+ *
+ * @author Vlad Manolache
  */
 public class MissingNumber {
 

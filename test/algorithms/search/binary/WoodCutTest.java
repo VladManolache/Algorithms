@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  *
- * @author user
+ * @author Vlad Manolache
  */
 public class WoodCutTest {
     

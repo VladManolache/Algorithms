@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
- * @author user
+ * @author Vlad Manolache
  */
 public class RedBlackTreeTest {
 

@@ -5,7 +5,7 @@ package algorithms.data_structure.graph.common;
 
 /**
  *
- * @author vmanolache
+ * @author Vlad Manolache
  */
 public class AdjacencyListElement { 
     public int node1;

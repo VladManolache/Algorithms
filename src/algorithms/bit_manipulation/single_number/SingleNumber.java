@@ -8,6 +8,8 @@ package algorithms.bit_manipulation.single_number;
  *
  * Solution:
  * Due to the property of xor, we have a^a = 0. Therefore, a^b^a = b
+ *
+ * @author Vlad Manolache
  */
 public class SingleNumber {
 
