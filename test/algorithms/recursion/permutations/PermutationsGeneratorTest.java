@@ -1,4 +1,4 @@
-package algorithms.permutations;
+package algorithms.recursion.permutations;
 
 import algorithms.math.FactorialCalculator;
 import org.junit.jupiter.api.Test;

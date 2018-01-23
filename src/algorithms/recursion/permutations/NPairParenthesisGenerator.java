@@ -1,4 +1,4 @@
-package algorithms.permutations;
+package algorithms.recursion.permutations;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * @author Vlad Manolache
  */
-public class NPairParanthesisGenerator {
+public class NPairParenthesisGenerator {
     
     public ArrayList<String> buildValidPermutations(int n) {
         ArrayList<String> list = new ArrayList<>();

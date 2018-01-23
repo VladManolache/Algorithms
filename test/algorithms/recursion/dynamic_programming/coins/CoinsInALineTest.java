@@ -1,4 +1,4 @@
-package algorithms.dynamic_programming;
+package algorithms.recursion.dynamic_programming.coins;
 
 
 import org.junit.jupiter.api.Test;

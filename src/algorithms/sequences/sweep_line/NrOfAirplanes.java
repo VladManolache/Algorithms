@@ -33,7 +33,7 @@ public class NrOfAirplanes {
         }
  
         // sort by start interval
-        Collections.sort(events, Event.EventComparator);
+        events.sort(Event.EventComparator);
         
         int count = 0;
         int max = Integer.MIN_VALUE;

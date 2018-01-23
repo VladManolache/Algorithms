@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.permutations;
+package algorithms.recursion.permutations;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,12 +13,12 @@ import java.util.ArrayList;
  *
  * @author Vlad Manolache
  */
-public class NPairParanthesisGeneratorTest {
+public class NPairParenthesisGeneratorTest {
     
     @Test
     void mainTest_v2() {
-        NPairParanthesisGenerator nPairParanthesisGenerator = new NPairParanthesisGenerator();
-        ArrayList<String> validPermutations = nPairParanthesisGenerator.buildValidPermutations(3);
+        NPairParenthesisGenerator nPairParenthesisGenerator = new NPairParenthesisGenerator();
+        ArrayList<String> validPermutations = nPairParenthesisGenerator.buildValidPermutations(3);
         assert(validPermutations.size() == 5);
     }
     
