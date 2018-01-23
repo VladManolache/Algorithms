@@ -23,7 +23,8 @@ class MinimalSequenceLengthTest {
         results.add(5); results.add(7);
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     @Test
@@ -37,7 +38,8 @@ class MinimalSequenceLengthTest {
         results.add(6); results.add(5);
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     @Test
@@ -53,7 +55,8 @@ class MinimalSequenceLengthTest {
         results.add(9); results.add(7); results.add(8);
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     private List<Character> stringToList(String string) {
@@ -68,7 +71,8 @@ class MinimalSequenceLengthTest {
         List<Integer> results = new ArrayList<>(Arrays.asList(1,1,1,1,1,4,1));
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     @Test
@@ -79,7 +83,8 @@ class MinimalSequenceLengthTest {
         List<Integer> results = new ArrayList<>(Arrays.asList(1,7,1,1,2,1,1,1));
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     @Test
@@ -90,7 +95,8 @@ class MinimalSequenceLengthTest {
         List<Integer> results = new ArrayList<>(Arrays.asList(1,1,14,3,1));
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     @Test
@@ -101,7 +107,8 @@ class MinimalSequenceLengthTest {
         List<Integer> results = new ArrayList<>(Arrays.asList(10,10,10));
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 
     @Test
@@ -112,6 +119,7 @@ class MinimalSequenceLengthTest {
         List<Integer> results = new ArrayList<>(Arrays.asList(24,1,21,1,3));
 
         MinimalSequenceLength minimalSequenceLength = new MinimalSequenceLength();
-        assert(minimalSequenceLength.findLength(list).equals(results));
+        assert(minimalSequenceLength.findLength_v1(list).equals(results));
+        assert(minimalSequenceLength.findLength_v2(list).equals(results));
     }
 }

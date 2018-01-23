@@ -11,7 +11,38 @@ import java.util.ArrayList;
  */
 public class MinimalSequenceLength {
 
-    public List<Integer> findLength(List<Character> inputList) {
+    public List<Integer> findLength_v1(List<Character> inputList) {
+
+        List<Integer> results = new ArrayList<>();
+        int array[] = new int[inputList.size()];
+        for (int i = 0; i < inputList.size(); i++) {
+            int lastIndex = inputList.lastIndexOf(inputList.get(i));
+            for (int j = i; j <= lastIndex; j++) {
+                array[j]++;
+            }
+        }
+
+        int start = -1;
+        for (int i = 0; i < inputList.size(); i++) {
+            if (array[i] == 1) {
+                if (start == -1) {
+                    start = i;
+                }
+                else {
+                    results.add(i - start);
+                    start = i;
+                }
+            }
+        }
+
+        if (start != -1) {
+            results.add(inputList.size() - start);
+        }
+
+        return results;
+    }
+
+    public List<Integer> findLength_v2(List<Character> inputList) {
         System.out.println("Input: " + inputList);
 
         List<Integer> results = new ArrayList<>();
@@ -52,5 +83,4 @@ public class MinimalSequenceLength {
         }
         System.out.println();
     }
-
 }
