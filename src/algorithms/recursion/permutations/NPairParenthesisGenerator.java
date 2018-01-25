@@ -21,24 +21,23 @@ public class NPairParenthesisGenerator {
                                      String currentString,
                                      int openedLeft,
                                      int openedRight) {
-        
-        if ( currentString.length() == 2 * targetSize ) {
+
+        if (currentString.length() == 2 * targetSize) {
             if (openedLeft == openedRight) {
                 accumulator.add(currentString);
             }
             return;
         }
-                
+
         String newString;
-        if ( openedLeft < targetSize ) {
+        if (openedLeft < targetSize) {
             newString = currentString + "(";
             generateParenthesis(targetSize, accumulator, newString, openedLeft + 1, openedRight);
         }
-        
-        if ( openedRight < openedLeft ) {
+
+        if (openedRight < openedLeft) {
             newString = currentString + ")";
             generateParenthesis(targetSize, accumulator, newString, openedLeft, openedRight + 1);
         }
     }
-    
 }

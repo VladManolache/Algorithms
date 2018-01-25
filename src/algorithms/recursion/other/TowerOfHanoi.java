@@ -24,13 +24,25 @@ import java.util.Stack;
  */
 public class TowerOfHanoi {
 
-    public void solve(Stack<String> initial) {
-        Stack<String> tmp = new Stack<>();
-        Stack<String> dest = new Stack<>();
+    private static class IdentifiedStack<T> extends Stack<T> {
+        String name;
+
+        IdentifiedStack(String name) {
+            this.name = name;
+        }
+    }
+
+    public void solve(String[] source) {
+        IdentifiedStack<String> initial = new IdentifiedStack<>("A");
+        for (String value : source) {
+            initial.push(value);
+        }
+        IdentifiedStack<String> tmp = new IdentifiedStack<>("B");
+        IdentifiedStack<String> dest = new IdentifiedStack<>("C");
         solveProblem(initial.size(), initial, tmp, dest);
     }
 
-    private void solveProblem(int n, Stack<String> source, Stack<String> helper, Stack<String> destination) {
+    private void solveProblem(int n, IdentifiedStack<String> source, IdentifiedStack<String> helper, IdentifiedStack<String> destination) {
         if (n > 0) {
             // move n - 1 disks from source to auxiliary, so they are out of the way
             solveProblem(n - 1, source, destination, helper);
@@ -39,10 +51,7 @@ public class TowerOfHanoi {
             destination.push(source.pop());
 
             // Display our progress
-            System.out.println("A: " + source + " ");
-            System.out.println("B: " + helper + " ");
-            System.out.println("C: " + destination);
-            System.out.println();
+            System.out.println("N: " + n + " | " + source.name + " -> " + destination.name);
 
             // move the n - 1 disks that we left on auxiliary onto target
             solveProblem(n - 1, helper, source, destination);

@@ -26,6 +26,7 @@ public class NQueensGenerator {
         int j = currentColumn;
         for (int i = 0; i < matrixSize; i++) {
 
+            // Decide if we should continue.
             boolean isEmpty = true;
             for (int k = 0; k < matrixSize; k++) {
                 if (board[i][k] == 1) {
@@ -50,11 +51,13 @@ public class NQueensGenerator {
             }
 
             if (isEmpty) {
+                // Make current move
                 board[i][j] = 1;
 
+                // Make next moves
                 buildNQueens(matrixSize, board, currentColumn + 1, queenCount, currentQueenCount + 1);
                 
-                // backtracking ...
+                // Backtracking ...
                 board[i][j] = 0;
             }
         } 

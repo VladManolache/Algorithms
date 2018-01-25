@@ -4,6 +4,7 @@ import algorithms.math.FactorialCalculator;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 /**
  *
@@ -13,17 +14,25 @@ public class PermutationsGeneratorTest {
 
     @Test
     void mainTest_v1() {
-        PermutationsGenerator logic = new PermutationsGenerator();
-        logic.generatePermutations_v1("abcdefg");
-    }
-    
-    @Test
-    void mainTest_v2() {
-        String string = "abcdefg";
+        String string = "abcd";
         PermutationsGenerator permutationsGenerator = new PermutationsGenerator();
-        ArrayList<String> result = permutationsGenerator.generatePermutations_v2(string);
-         
+        Set<String> result = permutationsGenerator.generatePermutations_v1(string);
+
+        Set<String> result1 = permutationsGenerator.generatePermutations_v2(string);
         FactorialCalculator factorialCalculator = new FactorialCalculator();
         assert(result.size() == factorialCalculator.calculateFactorial(string.length()));
+        assert(result.equals(result1));
+    }
+
+    @Test
+    void mainTest_v2() {
+        String string = "abcdefgh";
+        PermutationsGenerator permutationsGenerator = new PermutationsGenerator();
+        Set<String> result = permutationsGenerator.generatePermutations_v1(string);
+
+        Set<String> result1 = permutationsGenerator.generatePermutations_v2(string);
+        FactorialCalculator factorialCalculator = new FactorialCalculator();
+        assert(result.size() == factorialCalculator.calculateFactorial(string.length()));
+        assert(result.equals(result1));
     }
 }
