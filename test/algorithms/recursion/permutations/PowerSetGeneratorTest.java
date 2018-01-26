@@ -23,12 +23,12 @@ public class PowerSetGeneratorTest {
         set.add("a");
         set.add("b");
         set.add("c");
-        int expectedResultSetSize = (int) Math.pow(2, set.size()) - 1;
+        int expectedResultSetSize = (int) Math.pow(2, set.size());
 
         PowerSetGenerator<String> powerSetGenerator = new PowerSetGenerator<>();
-        HashSet<List<String>> result1 = powerSetGenerator.buildPowerSet_v1(set);
-        HashSet<List<String>> result2 = powerSetGenerator.buildPowerSet_v2(set);
-        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_v3(set);
+        HashSet<List<String>> result1 = powerSetGenerator.buildPowerSet_recursion(set);
+        HashSet<List<String>> result2 = powerSetGenerator.buildPowerSet_backtracking(set);
+        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_binary(set);
 
         assert(result1.size() == expectedResultSetSize);
         assert(result2.size() == expectedResultSetSize);
@@ -44,12 +44,12 @@ public class PowerSetGeneratorTest {
         set.add("d");
         set.add("e");
         set.add("f");
-        int expectedResultSetSize = (int) Math.pow(2, set.size()) - 1;
+        int expectedResultSetSize = (int) Math.pow(2, set.size());
 
         PowerSetGenerator<String> powerSetGenerator = new PowerSetGenerator<>();
-        HashSet<List<String>> result1 = powerSetGenerator.buildPowerSet_v1(set);
-        HashSet<List<String>> result2 = powerSetGenerator.buildPowerSet_v2(set);
-        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_v3(set);
+        HashSet<List<String>> result1 = powerSetGenerator.buildPowerSet_recursion(set);
+        HashSet<List<String>> result2 = powerSetGenerator.buildPowerSet_backtracking(set);
+        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_binary(set);
 
         assert(result1.size() == expectedResultSetSize);
         assert(result2.size() == expectedResultSetSize);
@@ -62,10 +62,11 @@ public class PowerSetGeneratorTest {
         set.add("a"); set.add("b"); set.add("c"); set.add("d"); set.add("e"); set.add("f");
         set.add("g"); set.add("h"); set.add("i"); set.add("j"); set.add("k"); set.add("l");
         set.add("m"); set.add("n"); set.add("o"); set.add("p"); set.add("q"); set.add("r");
-        int expectedResultSetSize = (int) Math.pow(2, set.size()) - 1;
+
+        int expectedResultSetSize = (int) Math.pow(2, set.size());
 
         PowerSetGenerator<String> powerSetGenerator = new PowerSetGenerator<>();
-        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_v3(set);
+        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_binary(set);
         assert(result3.size() == expectedResultSetSize);
     }
 }
