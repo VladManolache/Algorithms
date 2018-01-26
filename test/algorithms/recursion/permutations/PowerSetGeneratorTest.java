@@ -36,7 +36,7 @@ public class PowerSetGeneratorTest {
     }
     
     @Test
-    void mainTest() {
+    void mediumTest() {
         ArrayList<String> set = new ArrayList<>();
         set.add("a");
         set.add("b");
@@ -54,6 +54,46 @@ public class PowerSetGeneratorTest {
         assert(result1.size() == expectedResultSetSize);
         assert(result2.size() == expectedResultSetSize);
         assert(result3.size() == expectedResultSetSize);
+    }
+
+    @Test
+    void duplicateTest() {
+        ArrayList<String> set = new ArrayList<>();
+        set.add("a");
+        set.add("b");
+        set.add("c");
+        set.add("a");
+        set.add("e");
+        set.add("f");
+
+        PowerSetGenerator<String> powerSetGenerator = new PowerSetGenerator<>();
+        HashSet<List<String>> result1 = powerSetGenerator.buildPowerSet_recursion(set);
+        HashSet<List<String>> result2 = powerSetGenerator.buildPowerSet_backtracking(set);
+        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_binary(set);
+
+        assert(result1.size() == 48);
+        assert(result2.size() == 48);
+        assert(result3.size() == 48);
+    }
+
+    @Test
+    void multipleDuplicatesTest() {
+        ArrayList<String> set = new ArrayList<>();
+        set.add("a");
+        set.add("b");
+        set.add("a");
+        set.add("d");
+        set.add("a");
+        set.add("a");
+
+        PowerSetGenerator<String> powerSetGenerator = new PowerSetGenerator<>();
+        HashSet<List<String>> result1 = powerSetGenerator.buildPowerSet_recursion(set);
+        HashSet<List<String>> result2 = powerSetGenerator.buildPowerSet_backtracking(set);
+        HashSet<List<String>> result3 = powerSetGenerator.buildPowerSet_binary(set);
+
+        assert(result1.size() == 20);
+        assert(result2.size() == 20);
+        assert(result3.size() == 20);
     }
 
     @Test

@@ -1,6 +1,7 @@
 package algorithms.recursion.permutations;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
@@ -20,6 +21,8 @@ import java.util.List;
  * {a, b, c} = 111 = 7
  * We can then iterate over all values including from 0 to 2^n (representing all combinations of 0 and 1)
  *  and add each combination to the list.
+ *
+ * Note - Duplicate input values are supported, but each result subset contains distinct elements.
  *
  * @author Vlad Manolache
  */
@@ -62,14 +65,8 @@ public class PowerSetGenerator<T> {
 
     private void generatePowerSet_backtracking(List<T> currentList, List<T> initialList, boolean[] used, HashSet<List<T>> powerSet) {
         // Add solution if valid.
-        boolean contains = false;
-        for (List<T> list : powerSet) {
-            if (list.containsAll(currentList) && currentList.containsAll(list)) {
-                contains = true;
-                break;
-            }
-        }
-        if (!contains) {
+        currentList.sort(Comparator.comparing(Object::toString));
+        if (!powerSet.contains(currentList)) {
             // Important - save a new list to avoid having it altered subsequently.
             powerSet.add(new ArrayList<>(currentList));
         }
@@ -94,19 +91,22 @@ public class PowerSetGenerator<T> {
         }
     }
 
-    private void generatePowerSet_binary(List<T> list, HashSet<List<T>> powerSet) {
-        int pow_set_size = (int) Math.pow(2, list.size());
+    private void generatePowerSet_binary(List<T> initialList, HashSet<List<T>> powerSet) {
+        int pow_set_size = (int) Math.pow(2, initialList.size());
 
         // Run from counter 000..0 to 111..1
         for (int counter = 0; counter < pow_set_size; counter++) {
             List<T> accumulator = new ArrayList<>();
-            for (int j = 0; j < list.size(); j++) {
+            for (int j = 0; j < initialList.size(); j++) {
                 // Check if j-th bit in the counter is set.
                 if ((counter & (1 << j)) != 0) {
-                    accumulator.add(list.get(j));
+                    accumulator.add(initialList.get(j));
                 }
             }
-            powerSet.add(accumulator);
+            accumulator.sort(Comparator.comparing(Object::toString));
+            if (!powerSet.contains(accumulator)) {
+                powerSet.add(accumulator);
+            }
         }
     }
 }
