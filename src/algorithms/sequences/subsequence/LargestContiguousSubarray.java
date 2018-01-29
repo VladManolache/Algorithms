@@ -12,12 +12,15 @@ package algorithms.sequences.subsequence;
 public class LargestContiguousSubarray {
 
     public static int[] largestContiguousSubarray(int[] S) {
+        if (S.length == 0) {
+            return new int[] {};
+        }
 
         int start = 0;
         int end = 0;
         int current = 0;
         int sum = 0;
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;  // handle single value
 
         for (int i = 1; i < S.length; i++) {
             sum += S[i];
