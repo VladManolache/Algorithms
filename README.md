@@ -1,8 +1,8 @@
 # Algorithms
 
 # Important:
-### Sort -> MergeIntervals - Google
-### Sequences - SubSequences -> LargestContiguousSubArray - Google, PayPal, Yahoo, Microsoft, LinkedIn
+##### - MergeIntervals @(Google)
+##### - LargestContiguousSubArray @(Google, PayPal, Yahoo, Microsoft, LinkedIn)
 
 ### Data Structure:
 #### 1) Array
