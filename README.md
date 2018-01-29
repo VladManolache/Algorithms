@@ -1,8 +1,8 @@
 # Algorithms
 
-# Important:
-##### - MergeIntervals @(Google)
-##### - LargestContiguousSubArray @(Google, PayPal, Yahoo, Microsoft, LinkedIn)
+### Important:
+- MergeIntervals @(Google)
+- LargestContiguousSubArray @(Google, PayPal, Yahoo, Microsoft, LinkedIn)
 
 ### Data Structure:
 #### 1) Array
