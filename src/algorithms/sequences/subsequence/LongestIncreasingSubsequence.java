@@ -1,22 +1,14 @@
 package algorithms.sequences.subsequence;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
-/**
- * Given an array of integers, find a contiguous sub-array which has the largest sum.
- * 
- * Example:
- * Given the array [-2, 2, -3, 4, -1, 2, 1, -5, 3], the contiguous sub-array [4,-1, 2, 1] 
- *  has the largest sum = 6.
- * 
- * @author Vlad Manolache
- */
 public class LongestIncreasingSubsequence {
-    
+
     public static Object[] longestIncreasingSubsequence(int[] S) {
-        // initialise the length and position arrays. Initially, each 
-        //  element is it's own sub-array.
+
+        // initialise the length and position arrays. Initially, each element is it's own sub-array.
         int n = S.length;
         int[] l = new int[n];
         int[] pos = new int[n];
@@ -36,15 +28,8 @@ public class LongestIncreasingSubsequence {
         }
         
         System.out.println();
-        System.out.print("Length array = ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(l[i] + " ");
-        }
-        System.out.println();
-        System.out.print("Pos array = ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(pos[i] + " ");
-        } 
+        System.out.println("Length array = " + Arrays.toString(l));
+        System.out.println("Pos array = " + Arrays.toString(pos));
         
         // pick maximum. 
         int maxIndex = 0;
