@@ -3,6 +3,8 @@
 ### Important:
 - MergeIntervals @(Google)
 - LargestContiguousSubArray @(Google, PayPal, Yahoo, Microsoft, LinkedIn)
+- MatrixRotate @(Google, Facebook, Amazon)
+- NextPermutation @(Microsoft, Amazon)
 
 ### Data Structure:
 #### 1) Array
