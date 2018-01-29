@@ -27,12 +27,38 @@ public class MergeIntervalsTest {
         List<Interval> desiredResults = new ArrayList<>();
         desiredResults.add(new Interval(1, 6));
         desiredResults.add(new Interval(8, 10));
-        desiredResults.add(new Interval(15, 18));  
-        
-        for (int i = 0; i < results.size(); i++) {
-            System.out.println(results.get(i).start + " " + results.get(i).end);
+        desiredResults.add(new Interval(15, 18));
+
+        for (Interval result : results) {
+            System.out.println(result.start + " " + result.end);
         }
         
+        assert(equals(results, desiredResults));
+    }
+
+    @Test
+    void testMergeIntervalsAdvanced() {
+        MergeIntervals mergeIntervals = new MergeIntervals();
+
+        List<Interval> intervals = new ArrayList<>();
+        intervals.add(new Interval(1, 2));
+        intervals.add(new Interval(3, 5));
+        intervals.add(new Interval(4, 9));
+        intervals.add(new Interval(6, 7));
+        intervals.add(new Interval(8, 10));
+        intervals.add(new Interval(12, 16));
+
+        List<Interval> results = mergeIntervals.merge(intervals);
+
+        List<Interval> desiredResults = new ArrayList<>();
+        desiredResults.add(new Interval(1, 2));
+        desiredResults.add(new Interval(3, 10));
+        desiredResults.add(new Interval(12, 16));
+
+        for (Interval result : results) {
+            System.out.println(result.start + " " + result.end);
+        }
+
         assert(equals(results, desiredResults));
     }
     

@@ -1,7 +1,8 @@
 # Algorithms
 
-### Bit Manipulation
-- Merge M into N
+# Important:
+### Sort -> MergeIntervals - Google
+### Sequences - SubSequences -> LargestContiguousSubArray - Google, PayPal, Yahoo, Microsoft, LinkedIn
 
 ### Data Structure:
 #### 1) Array
