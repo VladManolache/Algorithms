@@ -1,6 +1,9 @@
 package algorithms.sequences.subsequence;
 
 /**
+ * Priority: High
+ * Companies: Google, PayPal, Yahoo, Microsoft, LinkedIn
+ *
  * Given an array of integers, find a contiguous sub-array which has the largest sum.
  *
  * Example:
