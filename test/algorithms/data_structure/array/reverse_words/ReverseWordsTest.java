@@ -1,4 +1,4 @@
-package algorithms.sequences;
+package algorithms.data_structure.array.reverse_words;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,8 +1,9 @@
-package algorithms.sequences.two_pointers;
+package algorithms.sequences.two_pointers.three_sum;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -16,18 +17,12 @@ public class ThreeSumTest {
         ThreeSum threeSum = new ThreeSum();
         
         ArrayList<ArrayList<Integer>> expectedResults = new ArrayList<>();
-        ArrayList<Integer> firstResult = new ArrayList<>();
-        firstResult.add(-1);
-        firstResult.add(-1);
-        firstResult.add(2);
+        ArrayList<Integer> firstResult = new ArrayList<>(Arrays.asList(-1,-1,2));
+        ArrayList<Integer> secondResult = new ArrayList<>(Arrays.asList(-1,0,1));
         expectedResults.add(firstResult);
-        ArrayList<Integer> secondResult = new ArrayList<>();
-        secondResult.add(-1);
-        secondResult.add(0);
-        secondResult.add(1);
         expectedResults.add(secondResult);
         
-        assert(expectedResults.equals(threeSum.getThreeSumPairs(numbers)));
+        assert(expectedResults.equals(threeSum.threeSumPairs(numbers)));
     }
     
 }

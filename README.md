@@ -6,6 +6,7 @@
 - MatrixRotate @(Google, Facebook, Amazon)
 - NextPermutation @(Microsoft, Amazon)
 - GridUniquePaths @(Google, Amazon, Microsoft, Adobe)
+- ThreeSum @(Facebook, Amazon, Google)
 
 ### Data Structure:
 #### 1) Array
