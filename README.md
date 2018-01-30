@@ -5,6 +5,7 @@
 - LargestContiguousSubArray @(Google, PayPal, Yahoo, Microsoft, LinkedIn)
 - MatrixRotate @(Google, Facebook, Amazon)
 - NextPermutation @(Microsoft, Amazon)
+- GridUniquePaths @(Google, Amazon, Microsoft, Adobe)
 
 ### Data Structure:
 #### 1) Array
