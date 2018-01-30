@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Priority: High
  * Difficulty: Medium
- * Companies: Facebook, Amazon, Google
+ * Companies: Facebook, Google
  *
  * Description:
  * Given an array S of n integers, are there elements a, b, c in S such that 
