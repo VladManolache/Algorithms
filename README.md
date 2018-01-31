@@ -7,6 +7,7 @@
 - NextPermutation @(Microsoft, Amazon)
 - GridUniquePaths @(Google, Amazon, Microsoft, Adobe)
 - ThreeSum @(Facebook, Google)
+- MaximumDistance @(Google, Amazon)
 
 ### Data Structure:
 #### 1) Array
