@@ -1,7 +1,6 @@
-package algorithms.search;
+package algorithms.search.other.sum_k_elem;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 /** 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithms.search.binary;
+package algorithms.search.binary.wood_cut;
 
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package algorithms.search.binary;
+package algorithms.search.binary.wood_cut;
 
 /**
  * Given n pieces of wood with length L[i] (integer array). Cut them into small 

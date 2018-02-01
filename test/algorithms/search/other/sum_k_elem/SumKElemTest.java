@@ -1,4 +1,4 @@
-package algorithms.search;
+package algorithms.search.other.sum_k_elem;
 
 
 import org.junit.jupiter.api.Test;

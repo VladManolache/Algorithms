@@ -9,6 +9,7 @@
 - 3Sum @(Facebook, Google)
 - MaximumDistance @(Google, Amazon)
 - 3Closest3Arrays @(Google, Microsoft, Yahoo)
+- FindInRotatedArray @(Adobe, Amazon)
 
 ### Data Structure:
 #### 1) Array

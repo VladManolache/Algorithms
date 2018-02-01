@@ -6,10 +6,11 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
+ * Description:
  * Power Set Power set P(S) of a set S is the set of all subsets of S.
  * For example S = {a, b, c} then P(s) = {{}, {a}, {b}, {c}, {a,b}, {a, c}, {b, c}, {a, b, c}}.
  *
- * Solution
+ * Solution:
  * Given the length of the set n, each subset can be represent as follows:
  * {} = 000 (Binary) = 0 (Decimal)
  * {a} = 100 = 4

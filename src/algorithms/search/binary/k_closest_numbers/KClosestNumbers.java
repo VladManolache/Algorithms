@@ -1,4 +1,4 @@
-package algorithms.search.binary;
+package algorithms.search.binary.k_closest_numbers;
 
 /**
  * K Closest Numbers In Sorted Array

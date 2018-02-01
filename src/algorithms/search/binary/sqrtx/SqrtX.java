@@ -1,4 +1,4 @@
-package algorithms.search.binary;
+package algorithms.search.binary.sqrtx;
 
 /**
  *

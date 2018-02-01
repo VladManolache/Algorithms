@@ -1,4 +1,4 @@
-package algorithms.search;
+package algorithms.search.other.wildcard_match;
 
 /**
  * Given a text and a wildcard pattern, implement wildcard pattern matching algorithm that finds if wildcard pattern

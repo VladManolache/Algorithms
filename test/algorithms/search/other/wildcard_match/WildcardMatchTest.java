@@ -1,4 +1,4 @@
-package algorithms.search;
+package algorithms.search.other.wildcard_match;
 
 import org.junit.jupiter.api.Test;
 
