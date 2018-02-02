@@ -11,6 +11,7 @@
 - 3Closest3Arrays @(Google, Microsoft, Yahoo)
 - FindInRotatedArray @(Adobe, Amazon)
 - SqrtX @(Facebook, Amazon, Microsoft)
+- KnightOnABoard @(Goldman Sachs, Amazon)
 
 ### Data Structure:
 #### 1) Array
