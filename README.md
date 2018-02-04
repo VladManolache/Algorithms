@@ -12,6 +12,7 @@
 - FindInRotatedArray @(Adobe, Amazon)
 - SqrtX @(Facebook, Amazon, Microsoft)
 - KnightOnABoard @(Goldman Sachs, Amazon)
+- WindowString @(Google, Directi)
 
 ### Data Structure:
 #### 1) Array

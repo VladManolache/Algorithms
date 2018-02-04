@@ -1,4 +1,4 @@
-package algorithms.sequences.two_pointers.trap_rain_water;
+package algorithms.sequences.two_pointers.other.trap_rain_water;
 
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package algorithms.sequences.two_pointers.trap_rain_water;
+package algorithms.sequences.two_pointers.other.trap_rain_water;
 
 /**
  * Given n non-negative integers representing an elevation map where the width 
